@@ -705,17 +705,26 @@ code {
         margin: auto;
 
         ul {
-            li .video-preview {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+             .video-preview {
                 margin-bottom: $val8 * 3;
+                padding: 16px;
+                
+                &.side-by-side {
+                    flex-flow: row nowrap;
+                }
 
                 .video-container {
                     border-radius: $val4;
                     margin-right: $val8;
                     max-width: 480px;
                     padding-bottom: 270px;
+
+                    @media all and (max-width: 600px) {
+                        max-width: 320px;
+                        padding-bottom: 170px;  
+                        margin-right: auto;
+                        margin-bottom: $val4;                      
+                    }
                 }
 
                 .details {
@@ -730,7 +739,7 @@ code {
                             margin: 4px;
                             flex: 1 2;
                             display: block;
-                            text-align: left;
+                            text-align: center;
                         }
 
                         @media all and (max-width: 800px) {

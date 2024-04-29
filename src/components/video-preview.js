@@ -8,7 +8,7 @@ const VideoPreview = ({
 }) => {
     const copyCommand = `wget -P home/deck/.steam/root/config/uioverrides/movies ${ downloadLink }`
     return (
-        <div className="video-preview">
+        <div className="video-preview side-by-side">
             <div class="video-container">
                 <iframe src={'https://www.youtube.com/embed/' + videoId} title={videoTitle} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>

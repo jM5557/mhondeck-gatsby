@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import logo from "../images/logo.svg"
 
 import Layout from "../components/layout"
@@ -9,18 +8,23 @@ import VideoPreview from "../components/video-preview"
 const VideoPreviews = [
   {
     videoId: "apiqRmO9Xyo",
-    videoTitle: "MHOnDeck | Steam Deck Bootup Video | 20th Anniversary - Hunters Intro (MH Logo - Sound)",
-    downloadLink: "https://www.mediafire.com/file_premium/i23vs5mgbie26sn/MHOnDeck_-_20th_Anniversary_-_Hunters_Intro_-_OG_Logo_-_SOUND_-_3s.mp4"
+    videoTitle: "20th Anniversary - Hunters Intro (MH Logo - Sound)",
+    downloadLink: "https://www.mediafire.com/file_premium/1h2n4jy1p980fwk/MHOnDeck_-_20th_Anniversary_-_Hunters_Intro_-_OG_Logo_-_SOUND_-_3s.webm"
+  },
+  {
+    videoId: "iRKbKtKe900",
+    videoTitle: "20th Anniversary - Hunter's Intro (Anniversary Logo - Sound)",
+    downloadLink: "https://www.mediafire.com/file_premium/llovg70w7uxdcy3/MHOnDeck_-_20th_Anniversary_-_Hunters_Intro_-_20th_Logo_-_SOUND_-_3s.webm"
   },
   {
     videoId: "c20UGlO2NOU",
-    videoTitle: "MHOnDeck | Steam Deck Bootup Video | 20th Anniversary - Hunter's Intro (No Logo - Sound)",
-    downloadLink: "https://www.mediafire.com/file_premium/q9tbyzak77k5a8m/MHOnDeck_-_20th_Anniversary_-_Hunters_Intro_-_NO_Logo_-_SOUND_-_3s.mp4"
+    videoTitle: "20th Anniversary - Hunters Intro (No Logo - Sound)",
+    downloadLink: "https://www.mediafire.com/file_premium/0wj07a94q75na0u/MHOnDeck_-_20th_Anniversary_-_Hunters_Intro_-_NO_Logo_-_SOUND_-_3s.webm"
   },
   {
     videoId: "rlttqbAC1mk",
-    videoTitle: "MHOnDeck | Steam Deck Bootup Video | 20th Anniversary - Hunter's Intro (MHOnDeck Logo - Sound)",
-    downloadLink: "https://www.mediafire.com/file_premium/7be3xvblqpfvzr4/MHOnDeck_-_20th_Anniversary_-_Hunters_Intro_-_MHOnDeck_Logo_-_SOUND_-_3s.mp4"
+    videoTitle: "20th Anniversary - Hunter's Intro (MHOnDeck Logo - Sound)",
+    downloadLink: "https://www.mediafire.com/file_premium/eh4mbtwp6bwgh8o/MHOnDeck_-_20th_Anniversary_-_Hunters_Intro_-_MHOnDeck_Logo_-_SOUND_-_3s.webm"
   }
 ]
 
