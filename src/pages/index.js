@@ -36,6 +36,16 @@ const IndexPage = () => (
                         </a>
                         <h1>Monster Hunting <br /><b>In Style</b></h1>
                         <h2>Customize SteamOS with a Monster Hunter UI theme</h2>
+                        <a href="/bootup-vids" className="bootup-vid-link-banner">
+                            <div className="banner-inner">
+                                <h4>
+                                    NEW
+                                </h4>
+                                <span>
+                                    Add a Monster Hunter-themed Bootup Video
+                                </span>
+                            </div>
+                        </a>
                     </div>
                     <div class="downloads">
                         <div id="quick-setup">
@@ -58,7 +68,6 @@ const IndexPage = () => (
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
         <ScrollReveal>

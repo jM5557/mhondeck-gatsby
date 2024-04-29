@@ -630,12 +630,37 @@ code {
     }
 }
 
+.bootup-vid-link-banner {
+    max-width: 900px;
+    background: url('img/boot-videos-bg.png') no-repeat center bottom 0px;
+    background-size: cover;
+    display: table;
+    padding: $val4;
+    border-radius: $val4;
+    border: solid 2px #343434;
+
+    &:hover {
+        border-color: #ff530f;
+    }
+
+    h4 {
+        color: $accentColor;
+        font-size: 1rem;
+        margin-bottom: $val2;
+    }
+}
 
 #bootup-vids {
-    header {
+    .header-inner {
         max-width: 900px;
-        margin: $val8 * 2 auto;
-        padding: $val4;
+        margin: auto;
+    }
+
+    header {
+        background: url('img/boot-videos-bg.png') no-repeat center bottom 0px;
+        background-size: cover;
+        padding: $val8 $val4;
+        margin: auto auto $val8 * 2;
 
         .logo {
             img {

@@ -31,6 +31,7 @@ const VideoPreviews = [
 const BootupVidsPage = () => (
   <Layout id = "bootup-vids">
     <header>
+      <div className="header-inner">
             <a href="/" class="logo">
                 <img src={logo} alt="Logo" />
             </a>
@@ -38,6 +39,7 @@ const BootupVidsPage = () => (
                 Boot Up Videos
             </h1>
             <h2>for your Steam Deck</h2>
+      </div>
         </header>
         <div class="text-panel">
             <h3>How to Install</h3>
