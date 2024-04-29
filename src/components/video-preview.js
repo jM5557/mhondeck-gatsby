@@ -6,7 +6,7 @@ const VideoPreview = ({
     videoTitle,
     downloadLink
 }) => {
-    const copyCommand = `wget -P home/deck/.steam/root/config/uioverrides/movies ${ downloadLink }`
+    const copyCommand = `wget -P ~/.steam/root/config/uioverrides/movies ${ downloadLink }`
     return (
         <div className="video-preview side-by-side">
             <div class="video-container">
