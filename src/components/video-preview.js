@@ -17,7 +17,7 @@ const VideoPreview = ({
                 <h3>{videoTitle}</h3>
                 <div className="side-by-side">
                     <a class="cta" href={downloadLink}>Download</a>
-                    <CopyButton textToCopy={downloadLink} />
+                    <CopyButton textToCopy={copyCommand} />
                 </div>
             </div>
         </div>
