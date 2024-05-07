@@ -39,38 +39,44 @@ const BootupVidsPage = () => (
                 Boot Up Videos
             </h1>
             <h2>for your Steam Deck</h2>
+            <small>Last Updated 5.07.2024</small>
       </div>
-        </header>
-        <div class="text-panel">
-            <h3>How to Install</h3>
-            <h4>Quick Setup</h4>
-            <ol>
-              <li>Click the "1-Click Copy" button for the bootup video of your choice</li>
+    </header>
+    <section id = "instructions" className="side-by-side">
+      <div className="text-panel">
+        <h4>Quick Setup <b className="recommended-tag">Recommended</b></h4>
+        <ol>
+              <li>Select a video and click "1-Click Copy"</li>
               <li>Open the Konsole app</li>
-              <li>Paste and hit "Enter" to run the installation</li>
+              <li>Paste and hit "Enter", then wait for the installation</li>
               <li>Return to Gaming Mode</li>
               <li>
-                Visit Settings then Customization and enable the selected Boot Up Video
+                Visit <code>Settings &gt; Customization</code>
+              </li>
+              <li>
+                Select your video
               </li>
             </ol>
-            <br/>
-            <br/>
-            <br/>
-            <h4>Manual Setup</h4>
+      </div>
+      <div className="text-panel">
+        <h4>Manual Setup</h4>
             <ol>
-                <li>Download a Boot Up video of your choice</li>
-                <li>Copy the downloaded video to the folder: <code>
+                <li>Select a video and click "Download"</li>
+                <li>Move the downloaded video to the following directory (create the folders below if they do not exist): <code>
                     home/deck/.steam/root/config/uioverrides/movies/
                 </code></li>
-                <li>Return to Gaming Mode
+                <li>Return to Gaming Mode</li>
+                <li>
+                  Visit <code>Settings &gt; Customization</code>
                 </li>
                 <li>
-                    Visit Settings then Customization and enable the selected Boot Up Video
+                  Select your video
                 </li>
             </ol>
-        </div>
-        <section id = "videos">
-            <ul>
+      </div>
+    </section>
+    <section id = "videos">
+            <ul className="side-by-side">
               { VideoPreviews.map(v => (
                 <li key={v.iframeSrc}>
                   <VideoPreview
@@ -79,7 +85,7 @@ const BootupVidsPage = () => (
                 </li>
               ))}
             </ul>
-        </section>
+    </section>
   </Layout>
 )
 

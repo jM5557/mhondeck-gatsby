@@ -6,6 +6,7 @@ import Seo from "../components/seo";
 import logo from "../images/logo.svg";
 import CopyButton from "../components/copy-button";
 import ScrollReveal from "../components/scroll-reveal";
+import HomeGallery from "../components/home-gallery";
 
 const sourceUrls = {
     cssTheme: "https://drive.google.com/drive/folders/1pQtqFlDHCDNgFCp8egYLy8Ltk0htGobG?usp=sharing",
@@ -16,6 +17,7 @@ const sourceUrls = {
 const copyCommand = `wget -P /home/deck ${ sourceUrls.homebrewSet } && unzip -o -d /home/deck /home/deck/homebrew`;
 
 const screenshots = [
+    'home-screenshot.png',
     'game-screenshot.png',
     'settings-page-screenshot.png',
     'library-page-screenshot.png',
@@ -32,7 +34,7 @@ const IndexPage = () => (
                 <div class="side-by-side">
                     <div class="headings">
                         <a href="/" class="logo">
-                            <img src={logo} alt="MH On Deck Logo" />
+                            <img src={logo} alt="MHOnDeck Logo" />
                         </a>
                         <h1>Monster Hunting <br /><b>In Style</b></h1>
                         <h2>Customize SteamOS with a Monster Hunter UI theme</h2>
@@ -42,14 +44,14 @@ const IndexPage = () => (
                                     NEW
                                 </h4>
                                 <span>
-                                    Add a Monster Hunter-themed Bootup Video
+                                    Add a Monster Hunter-themed Boot Up Video
                                 </span>
                             </div>
                         </a>
                     </div>
                     <div class="downloads">
                         <div id="quick-setup">
-                            <h3>Quick Setup/Update <b>Recommended</b></h3>
+                            <h3>Quick Setup/Update <b className="recommended-tag">Recommended</b></h3>
                             <CopyButton textToCopy={copyCommand} />
                             <small>Includes CSS Theme and SFX Pack <br />Paste & run in Konsole app</small>
                         </div>
@@ -70,6 +72,9 @@ const IndexPage = () => (
                 </div>
             </div>
         </section>
+        <HomeGallery
+            images = {screenshots.map(s => `/static/img/${s}`)}
+        />
         <ScrollReveal>
             <section id = "installation">
                 <div class="inner-content">
@@ -93,7 +98,7 @@ const IndexPage = () => (
                                         CSS Loader
                                     </a>
                                     <p>
-                                        A plugin for Decky (and Windows app) that enables visual customization via CSS code.
+                                        A plugin for Decky that enables visual customization via CSS code.
                                         This is required for the "MHOnDeck CSS Theme"
                                     </p>
                                 </li>
@@ -229,26 +234,6 @@ const IndexPage = () => (
                                 Use this if you want the "MHOnDeck CSS Theme" enabled separately from other CSS themes that you may have installed. 
                             </p>
                         </div>
-                    </div>
-                </div>
-            </section>
-        </ScrollReveal>
-
-        <ScrollReveal>
-            <section id = "gallery" class="content-section">
-                <div class="inner-content">
-                    <h2>Gallery</h2>
-
-                    <img src="/static/img/home-screenshot.png" alt="" class="screen-1"/>
-
-                    <div class="images">
-                        { screenshots.map(s => (
-                            <a 
-                                href = {`/static/img/${s}`}
-                                style={{backgroundImage: `url('/static/img/${s}')`}}
-                                key={s}
-                            ></a>
-                        ))}
                     </div>
                 </div>
             </section>

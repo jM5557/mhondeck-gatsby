@@ -206,7 +206,7 @@ a {
     align-items: center;
     justify-content: center;
     padding-top: 24px;
-
+    animation: fadeIn 0.42s forwards 1;
     background: url("img/bg-games-opaque-lg.jpg") no-repeat center top 0px fixed;
     background-size: cover;
 
@@ -277,6 +277,53 @@ a {
     }
 }
 
+h3, h4 {
+    b { 
+        display: inline-block; 
+        background-color: #343434;
+        font-weight: 400;
+        padding: $val2 $val4;
+        border-radius: 500px;
+        margin-left: 4px;
+        font-size: small;
+
+        &.recommended-tag {
+                background-color: $accentColor;
+                color: $backgroundStartRGB;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to {opacity: 1;}
+}
+
+.no-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+  
+    &::-webkit-scrollbar {
+      background: transparent; /* Chrome/Safari/Webkit */
+      width: 0px;
+    }
+  }
+
+.gallery {
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+
+    img {
+        display: inline-block;
+        height: 240px;
+        scroll-snap-align: center;
+    }
+}
+
 .downloads {
     padding: $val4;
     background-color: rgba(12,12,12,0.63);
@@ -284,19 +331,6 @@ a {
 
     #quick-setup, #manual-setup {
         padding: $val4 $val4;
-
-        h3 {
-            b { 
-                display: inline-block; 
-                background-color: #343434;
-                font-weight: 400;
-                padding: $val2 $val4;
-                border-radius: 500px;
-                margin-left: 4px;
-                font-size: small;
-            }
-
-        }
 
         small {
             font-size: small;
@@ -314,13 +348,6 @@ a {
             max-width: 420px;
             font-size: 1.25rem;
             margin: $val4 auto;
-        }
-
-        h3 {
-            b {
-                background-color: $accentColor;
-                color: $backgroundStartRGB;
-            }
         }
 
         @media all and (max-width: 900px) {
@@ -466,6 +493,7 @@ section h2 {
 
         p {
             line-height: 1.75rem;
+            margin: auto;
         }
 
         code {
@@ -479,6 +507,8 @@ code {
     background-color: $backgroundEndRGB;
     padding: 4px;
     color: #FFF;
+    text-wrap: wrap;
+    word-break: break-all;
 }
 
 .content-section {
@@ -654,13 +684,15 @@ code {
     .header-inner {
         max-width: 900px;
         margin: auto;
+        animation: fadeIn 1s forwards 1;
     }
 
     header {
         background: url('img/boot-videos-bg.png') no-repeat center bottom 0px;
         background-size: cover;
-        padding: $val8 $val4;
-        margin: auto auto $val8 * 2;
+        padding: $val8 * 3 $val4;
+        margin: auto auto;
+        text-align: center;
 
         .logo {
             img {
@@ -680,6 +712,12 @@ code {
         h2 {
             font-size: 3rem;
             font-weight: 500;
+
+            & + small {
+                font-size: small;
+                display: table;
+                margin: $val4 auto;
+            }
         }
 
         @media all and (max-width: 800px) {
@@ -693,11 +731,22 @@ code {
         }
     }
 
+    #instructions {
+        padding: $val8 $val4;
+
+        .text-panel {
+            max-width: 512px;
+            margin: auto;
+
+            code {
+                font-size: small;
+            }
+        }
+    }
+
     .text-panel {
-        max-width: 900px;
-        margin: auto;
         padding: $val4;
-        margin-bottom: $val8;
+        margin-bottom: $val4;
 
         h3 {
             font-size: 2rem;
@@ -706,7 +755,7 @@ code {
 
         h4 {
             font-size: 1.75rem;
-            margin-bottom: $val2;
+            margin-bottom: $val4;
         }
 
         ol {
@@ -716,6 +765,7 @@ code {
 
             li {
                 margin-bottom: $val4;
+                line-height: $val6;
             }
         }
 
@@ -726,30 +776,22 @@ code {
     }
 
     #videos {
-        max-width: 900px;
+        max-width: 1440px;
         margin: auto;
 
         ul {
+            gap: 16px;
+
              .video-preview {
-                margin-bottom: $val8 * 3;
+                max-width: 480px;
+                margin: auto auto $val6;
                 padding: 16px;
-                
-                &.side-by-side {
-                    flex-flow: row nowrap;
-                }
 
                 .video-container {
                     border-radius: $val4;
-                    margin-right: $val8;
+                    margin: auto auto $val4;
                     max-width: 480px;
                     padding-bottom: 270px;
-
-                    @media all and (max-width: 600px) {
-                        max-width: 320px;
-                        padding-bottom: 170px;  
-                        margin-right: auto;
-                        margin-bottom: $val4;                      
-                    }
                 }
 
                 .details {
@@ -759,22 +801,11 @@ code {
                         margin-bottom: $val4;
                     }
 
-                    .side-by-side {
-                        a, button {
-                            margin: 4px;
-                            flex: 1 2;
-                            display: block;
-                            text-align: center;
-                        }
-
-                        @media all and (max-width: 800px) {
-                            padding-right: 16px;
-
-                            a,button {
-                                margin: 5px 5px;
-                                width: 100%;
-                            }
-                        }
+                    a, button {
+                        margin: 4px auto;
+                        display: block;
+                        text-align: center;
+                        width: 100%;
                     }
                 }
             }
