@@ -1,0 +1,148 @@
+.main-section {
+    text-align: center;
+    min-height: calc(100svh - 64px);
+    margin: 32px;
+    border-radius: $val6;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+    animation: fadeIn 0.42s forwards 1;
+    background: url("img/bg-games-opaque-lg.jpg") no-repeat center top 0px;
+    background-size: cover;
+
+    .headings {
+       flex: 1;
+       text-align: center;
+       margin-right: 32px;
+       padding: 16px;
+    }
+
+    .logo {
+        margin: auto;
+        margin-bottom: $val8;
+        display: inline-block;
+    }
+    
+    h1 {
+        font-size: 4rem;
+        margin-bottom: $val4;
+        text-transform: uppercase;
+
+        b {
+            color: $accentColor;
+        }
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .scroll-reveal {
+        text-align: center;
+    }
+
+    .cta {
+        display: inline-block;
+    }
+
+    .bottom-bar {
+        font-size: 1.5rem;
+        margin-top: $val8;
+        margin-bottom: $val8;
+        align-items: stretch;
+
+        @media screen and (max-width: 1200px) {
+            .bar-item {
+                margin: $val6;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            display: block;
+            text-align: center;
+
+            .bar-item {
+                margin: $val4 $val8;
+                display: block !important;
+            }
+        }
+
+        &.side-by-side {
+            justify-content: center;
+        }
+
+        .bar-item {
+            background: url('img/boot-videos-bg.png') no-repeat center bottom -800px;
+            background-size: cover;
+            background-color: $backgroundStartRGB;
+            display: table;
+            text-align: center;
+            border-radius: $val4;
+            padding: $val6;
+            border: solid thin $backgroundEndRGB;
+            box-shadow: inset 0px -24px 64px -8px #000000;
+            transition: background-position 0.48s cubic-bezier(0.23, 1, 0.320, 1);
+            margin-right: 16px;
+            min-width: 320px;
+
+            &:hover {
+                background-position: center bottom 0px;
+            }
+        
+            small {
+                font-size: 0.85rem;
+                display: table;
+                margin: $val4 auto 0px;
+        
+                a {
+                    color: $accentColor;
+                    font-size: 1rem;
+                }
+            }
+        
+            img {
+                max-width: 64px;
+                display: table;
+                margin: $val6 auto;
+            }
+        }
+
+        .cta {
+            font-size: 1rem;
+            border: none;
+            border-radius: $val2;
+            
+            &:not(.small) {
+                padding: $val4 $val6 * 2;
+            }
+        }
+
+        .side-by-side {
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+}
+
+.copy-wrapper {
+    background-color: $backgroundEndRGB;
+    padding: $val2 $val2 $val2 $val4;
+    border-radius: 500px;
+
+    input {
+        background-color: transparent;
+        color: #FFF;
+        opacity: 0.45;
+        border: none;
+        flex: 1 1;
+    }
+
+    button.cta {
+        padding: $val2 $val6;
+        margin-left: $val4;
+        border-radius: 500px !important;
+    }
+}

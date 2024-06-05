@@ -1,0 +1,21 @@
+.cta {
+    &, &:visited {
+       color: $backgroundEndRGB;
+    }
+    font-weight: 600;
+    padding: $val4;
+    background-color: $accentColor;
+    border-radius: $val2;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: $accentColor;
+        color: $backgroundStartRGB;
+    }
+}
+
+.cta.secondary {
+    background-color: transparent;
+    color: #FFF;
+}

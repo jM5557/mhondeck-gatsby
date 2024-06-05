@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 
-const CopyButton = ({ textToCopy, className = "cta" }) => {
+const CopyButton = ({ 
+  textToCopy, 
+  className = "cta", 
+innerText = "1-Click Copy",
+innerClickedText = "Copied" }) => {
   const [copied, setCopied] = useState(false);
 
   const copyToClipboard = () => {
@@ -11,7 +15,7 @@ const CopyButton = ({ textToCopy, className = "cta" }) => {
 
   return (
     <button className={className} onClick={copyToClipboard}>
-      {copied ? 'Copied!' : '1-Click Copy'}
+      {copied ? innerClickedText : innerText}
     </button>
   );
 };
