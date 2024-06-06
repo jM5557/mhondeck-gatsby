@@ -7,9 +7,6 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import logo from "../../images/logo.svg"
-
-import "./../layout.css"
 import "./../../styles/main.scss";
 
 const Layout = ({ children, id = "", title }) => {
@@ -28,30 +25,6 @@ const Layout = ({ children, id = "", title }) => {
   return (
     <>
         <main id = {id}>
-        <header>
-            <div className="header-inner space-between">
-                <a href="/" class="logo">
-                    <img src={logo} alt="Logo" />
-                </a>
-                <ul className="sub-nav side-by-side">
-                    <li>
-                        <a href = "/themes">
-                            UI Themes
-                        </a>
-                    </li>
-                    <li>
-                        <a href = "/themes">
-                            SFX Packs
-                        </a>
-                    </li>
-                    <li>
-                        <a href = "/themes">
-                            Music
-                        </a>
-                    </li>
-                </ul>    
-            </div>
-            </header>
             {children}
         </main>
         <footer class="footer">

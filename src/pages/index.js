@@ -1,22 +1,18 @@
 import * as React from "react"
 
-import Layout from "../components/layout"
+import Layout from "../components/layouts/layout"
 import Seo from "../components/seo";
 
 import logo from "../images/logo.svg";
 import windowsLogo from "../images/windows-logo-white.png";
 import steamLogo from "../images/steam-logo-white.png";
 import CopyButton from "../components/copy-button";
+import { Link } from "gatsby";
+import release from "./../release.json";
 import ScrollReveal from "../components/scroll-reveal";
 import HomeGallery from "../components/home-gallery";
 
-const sourceUrls = {
-    cssTheme: "https://drive.google.com/drive/folders/1pQtqFlDHCDNgFCp8egYLy8Ltk0htGobG?usp=sharing",
-    sfxPack: "https://drive.google.com/drive/folders/18KwOOM5FC2WkbVU924V5wng87OeI9flD?usp=sharing",
-    homebrewSet: "https://www.mediafire.com/file_premium/e4cjuj1h0odobmb/homebrew.zip"
-    
-}
-const copyCommand = `wget -P -N /home/deck ${ sourceUrls.homebrewSet } && unzip -o -d /home/deck /home/deck/homebrew`;
+const copyCommand = `wget -P -N /home/deck ${release.fullThemeDL} && unzip -o -d /home/deck /home/deck/homebrew`;
 
 const screenshots = [
     'home-screenshot.png',
@@ -25,65 +21,69 @@ const screenshots = [
     'library-page-screenshot.png',
     'downloads-page-screenshot.png',
     'qam-screenshot.png',
+    'menu-screenshot.png',
     'sub-menu-screenshot.png'
 ]
 
 const IndexPage = () => (
-  <Layout>
-    <React.Fragment>
-   <section class="main-section">
-            <div id = "top">
-                <div class="headings">
-                    <a href="/" class="logo">
-                        <img src={logo} alt="MHOnDeck Logo" />
-                    </a>
-                    <h1>Monster Hunting <br /><b>In Style</b></h1>
-                    <h2>Customize Steam with a Monster Hunter UI theme & more</h2>
-                    <div className = "bottom-bar side-by-side">
-                        <ScrollReveal transitionDelay="200ms">
+    <Layout>
+        <React.Fragment>
+            <section class="main-section">
+                <div id="top">
+                    <div class="headings">
+                        <a href="/" class="logo">
+                            <img src={logo} alt="MHOnDeck Logo" />
+                        </a>
+                        <h1>Monster Hunting <br /><b>In Style</b></h1>
+                        <h2>Custom Monster Hunter UI theme for Steam</h2>
+                        <div className="bottom-bar side-by-side">
                             <div className="bar-item">
                                 <h3>SteamOS <b className="recommended-tag">Quick Setup</b></h3>
-                                <img alt = "windows-logo" src = {steamLogo} />
+                                <img alt="windows-logo" src={steamLogo} />
                                 <div className="copy-wrapper space-between">
                                     <input type="text" contentEditable="false" value={copyCommand} />
-                                    <CopyButton textToCopy={copyCommand} className = "cta small" innerText="Copy" />
+                                    <CopyButton textToCopy={copyCommand} className="cta small" innerText="Copy" />
                                 </div>
-                                <small>Paste in Konsole App <br /><br /> <a href = "/themes/steamos">More Info</a></small>
+                                <small>Paste in Konsole App<br /> <br />Decky, CSS Loader, Audio Loader REQUIRED <br /><br /> <Link href="/themes/steamos">More Info</Link></small>
                             </div>
-                        </ScrollReveal>
-                        <ScrollReveal transitionDelay="400ms">
-                            <div className="bar-item">
-                                <h3>SteamOS <b>Manual Setup</b></h3>
-                                <img alt = "windows-logo" src = {steamLogo} />
-                                <a href = "/" className="cta">Download</a>
-                                <small>Unzip into <code>home/deck/homebrew</code><br /><br /> <a href = "/themes/steamos">More Info</a></small>
-                            </div>
-                        </ScrollReveal>
-                        <ScrollReveal transitionDelay="600ms">
                             <div className="bar-item">
                                 <h3>Windows 10 & 11</h3>
-                                <img alt = "windows-logo" src = {windowsLogo} />
-                                <a href = "/" className="cta">Download</a>
-                                <small>CSS Theme (Only)<br/><br/><a href = "/themes/windows">More Info</a></small>
+                                <img alt="windows-logo" src={windowsLogo} />
+                                <a href={release.cssThemeDL} className="cta">Download</a>
+                                <small>CSS Theme (Only)<br /> <br /> CSSLoader Desktop REQUIRED<br /><br /><Link href="/themes/windows">More Info</Link></small>
                             </div>
-                        </ScrollReveal>
+                        </div>
                     </div>
                 </div>
+            </section>
+            <div className="bootup-vid-link-banner">
+                <div className="banner-inner">
+                    <h4>
+                        NEW
+                    </h4>
+                    <h5>
+                        Bootup Videos for SteamOS
+                    </h5>
+                </div>
+                <Link className="cta" href="/bootup-vids">Browse</Link>
             </div>
-        </section>
-        <div className="bootup-vid-link-banner space-between">
-            <div className="banner-inner">
-                <h4>
-                    NEW
-                </h4>
-                <p>
-                    Monster Hunter Boot Up Videos for SteamOS
-                </p>
-            </div>
-            <a className = "cta" href="/bootup-vids">Browse</a>
-        </div>
+            <section className="new-features side-by-side">
+                <ScrollReveal>
+                    <img alt = "New Features Screenshot" src = "/additional-features.png" />
+                </ScrollReveal>
+                <div className="details">
+                    <h3>New Features</h3>
+                    <p>
+                        Enhance your SteamOS experience with the MHOnDeck CSS theme! 
+                        Try out new customizable options to mix and match designs, for a more personalized UI.
+                    </p>
+                </div>
+            </section>
+            <img alt = "New Main Menu Backgrounds" src = "/sidebar-comparison.png" className="screen-full" />
+
+            <HomeGallery images={screenshots} />
         </React.Fragment>
-  </Layout>
+    </Layout>
 )
 
 /**

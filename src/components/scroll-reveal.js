@@ -22,7 +22,7 @@ const ScrollReveal = ({ children, transitionDelay = "500ms" }) => {
     // Cleanup
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
+  
   return (
     <div ref={revealRef} className={`scroll-reveal ${isVisible ? 'visible' : ''}`}
       style={{

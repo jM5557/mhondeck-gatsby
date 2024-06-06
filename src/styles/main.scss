@@ -14,9 +14,10 @@
 
 body {
     color: $foregroundRGB;
-    background: $backgroundStartRGB url("img/bg-circles.svg") repeat-y center center;
+    background: $backgroundStartRGB url("img/bg-blur.png") repeat-y center center;
     background-size: 100% auto;
     font-family: 'Mulish', sans-serif;
+    overflow: unset;
 }
 
 h1,
@@ -46,6 +47,10 @@ a {
         color: inherit;
         text-decoration: none;
     }
+}
+
+img {
+    max-width: 100%;
 }
 
 .side-by-side {
@@ -113,7 +118,7 @@ ol {
     overflow-x: auto;
     text-align: center;
     white-space: nowrap;
-    
+    margin-top: -140px;
     scroll-snap-type: x mandatory;
     overscroll-behavior-x: contain;
 
@@ -121,21 +126,28 @@ ol {
         display: inline-block;
         height: 240px;
         scroll-snap-align: center;
+        margin: $val4;
+        border-radius: $val2;
+
+        opacity: 0;
+        box-shadow: 0px -10px 18px -8px #010101;
+        animation: fadeIn 0.32s forwards 1;
     }
 }
 
-#setup-quick, #setup-manual {
-    margin-top: $val8;
+.text-panel:not(.no-shrink) {
+    max-width: 900px;
+    margin: auto;
 
     ol {
-        display: flex;
-        align-items: stretch;
-        justify-content: flex-start;
-        flex-flow: row wrap;
+        width: 100%;
+        box-sizing: border-box;
+        margin: auto;
+        padding: 32px 0px;
 
         li {
-            margin: $val4;
-            border-top: solid 4px $accentColor;
+            margin: $val4 auto;
+            border-left: solid 4px $accentColor;
             background-color: $backgroundStartRGB;
             padding: $val6;
             flex: 1 1;
@@ -457,31 +469,6 @@ code {
     }
 }
 
-.bootup-vid-link-banner {
-    max-width: 900px;
-    background: url('img/boot-videos-bg.png') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    margin: auto;
-    padding: $val8 * 3 $val8 $val8;
-    border-radius: $val4;
-    border: solid 2px #343434;
-
-    &:hover {
-        border-color: #ff530f;
-    }
-
-    h4 {
-        color: $accentColor;
-        font-size: 1.5rem;
-        margin-bottom: $val2;
-    }
-
-    p {
-        font-size: 1.25rem;
-    }
-}
-
 .header-inner {
     max-width: 1440px;
     margin: auto;
@@ -509,9 +496,33 @@ code {
 section.hero {
     background: url('img/boot-videos-bg.png') no-repeat center bottom 0px;
     background-size: cover;
-    padding: $val8 * 3 $val8 * 3;
+    padding: 4%;
     margin: auto $val6;
-    border-radius: $val6;
+    border-radius: 0px 0px $val6 $val6;
+
+    animation: fadeDown 0.64s cubic-bezier(0.23, 1, 0.320, 1) forwards 1;
+
+    .logo {
+        max-width: 180px;
+        position: relative;
+        display: block;
+
+        img {
+            margin: auto;
+        }
+    }
+
+    .release-stats {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        & > * {
+            margin-right: $val6;
+
+            b { font-size: small; display: block; margin-bottom: $val2;color: $accentColor; font-weight: 600; text-transform: uppercase; }
+        }
+    }
 
     h1 {
         font-size: 5rem;
@@ -529,6 +540,20 @@ section.hero {
             font-size: small;
             display: table;
             margin: $val4 auto;
+        }
+    }
+    
+    h1, h2 { transition: font-size 0.32s cubic-bezier(0.19, 1, 0.22, 1); }
+    
+    @media all and (max-width: 900px) {
+        margin: auto;
+        h1 {
+            font-size: 3rem;
+            margin-bottom: $val2;
+        }
+
+        h2 {
+            font-size: 2rem;
         }
     }
 }
@@ -569,18 +594,8 @@ section.page-content {
 
 #bootup-vids {
     header {
-        
         text-align: center;
-
-        .logo {
-            img {
-                max-width: 240px;
-                margin: auto;
-            }
-        }
-
        
-
         @media all and (max-width: 800px) {
             h1 {
                 font-size: 4rem;
@@ -596,8 +611,6 @@ section.page-content {
         padding: $val8 $val4;
 
         .text-panel {
-            max-width: 512px;
-            margin: auto;
 
             code {
                 font-size: small;
@@ -606,30 +619,6 @@ section.page-content {
     }
 
     .text-panel {
-        padding: $val4;
-        margin-bottom: $val4;
-
-        h3 {
-            font-size: 2rem;
-            margin-bottom: $val4;
-        }
-
-        h4 {
-            font-size: 1.75rem;
-            margin-bottom: $val4;
-        }
-
-        ol {
-            list-style-type: decimal-leading-zero;
-            margin-left: $val6;
-
-
-            li {
-                margin-bottom: $val4;
-                line-height: $val6;
-            }
-        }
-
         code {
             display: table;
             margin-top: $val2;
@@ -655,6 +644,16 @@ section.page-content {
                     padding-bottom: 270px;
                 }
 
+                .btns {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    button {
+                        margin-right: $val4;
+                    }
+                }
+
                 .details {
                     h3 {
                         font-size: 2rem;
@@ -663,13 +662,22 @@ section.page-content {
                     }
 
                     a, button {
-                        margin: 4px auto;
                         display: block;
                         text-align: center;
                         width: 100%;
+                        box-sizing: border-box;
                     }
                 }
             }
         }
+    }
+}
+
+.tabs {
+    margin-top: $val6;
+
+    .cta {
+        border-radius: 0px;
+        font-size: 1.25rem;
     }
 }

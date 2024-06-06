@@ -6,16 +6,42 @@
     padding: $val4;
     background-color: $accentColor;
     border-radius: $val2;
-
+    transition: transform 0.2s cubic-bezier(0.23, 1, 0.320, 1);
     cursor: pointer;
 
     &:hover {
-        background-color: $accentColor;
-        color: $backgroundStartRGB;
+        transform: scale(1.1);
     }
 }
 
 .cta.secondary {
     background-color: transparent;
     color: #FFF;
+}
+
+.copy-wrapper {
+    background-color: $backgroundEndRGB;
+    padding: $val2 $val2 $val2 $val4;
+    border-radius: 500px;
+
+    input {
+        background-color: transparent;
+        color: #FFF;
+        opacity: 0.45;
+        border: none;
+        flex: 1 1;
+    }
+
+    button.cta {
+        padding: $val2 $val6;
+        margin-left: $val4;
+        border-radius: 500px !important;
+    }
+}
+
+.skip-btn {
+    display: table;
+    text-align: center;
+    margin: auto auto $val8;
+    font-weight: 700;
 }

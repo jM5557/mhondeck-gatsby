@@ -1,9 +1,10 @@
 import * as React from "react"
 import logo from "../images/logo.svg"
 
-import Layout from "../components/layout"
+import Layout from "../components/layouts/layout"
 import Seo from "../components/seo"
 import VideoPreview from "../components/video-preview"
+import { Link } from "gatsby"
 
 const VideoPreviews = [
   {
@@ -28,56 +29,72 @@ const VideoPreviews = [
   }
 ]
 
-const BootupVidsPage = () => (
-  <Layout id = "bootup-vids">
-    <header>
-      <div className="header-inner">
-            <a href="/" class="logo">
-                <img src={logo} alt="Logo" />
-            </a>
-            <h1>
-                Boot Up Videos
-            </h1>
-            <h2>for your Steam Deck</h2>
-            <small>Last Updated 5.07.2024</small>
+const BootupVidsPage = () => {
+  const [tab, selectTab] = React.useState("BROWSE");
+  const switchTab = (newTab = "BROWSE") => selectTab(newTab)
+  return (<Layout id="bootup-vids">
+    <section className="hero">
+      <Link href="/" className="logo">
+        <img alt="MHOnDeck Logo" src={logo} />
+      </Link>
+      <h1>
+        Steam Bootup Videos
+      </h1>
+      <h2>
+        for Steam Deck (SteamOS)
+      </h2>
+      <div className="release-stats">
+        <p><b>Last Updated</b> 5.07.2024</p>
       </div>
-    </header>
-    <section id = "instructions" className="side-by-side">
-      <div className="text-panel">
-        <h4>Quick Setup <b className="recommended-tag">Recommended</b></h4>
-        <ol>
-              <li>Select a video and click "1-Click Copy"</li>
-              <li>Open the Konsole app</li>
-              <li>Paste and hit "Enter", then wait for the installation</li>
-              <li>Return to Gaming Mode</li>
-              <li>
-                Visit <code>Settings &gt; Customization</code>
-              </li>
-              <li>
-                Select your video
-              </li>
-            </ol>
-      </div>
-      <div className="text-panel">
-        <h4>Manual Setup</h4>
-            <ol>
-                <li>Select a video and click "Download"</li>
-                <li>Move the downloaded video to the following directory (create the folders below if they do not exist): <code>
-                    home/deck/.steam/root/config/uioverrides/movies/
-                </code></li>
-                <li>Return to Gaming Mode</li>
-                <li>
-                  Visit <code>Settings &gt; Customization</code>
-                </li>
-                <li>
-                  Select your video
-                </li>
-            </ol>
-      </div>
+      <div className="release-stats tabs">
+          <button 
+            onClick={() => switchTab("BROWSE")} 
+            className={tab=="BROWSE"?"cta":"cta secondary"}
+          >
+            Videos
+          </button>
+          <button 
+            onClick={()=> switchTab("INSTALL")} 
+            className={tab=="INSTALL"?"cta": "cta secondary"}>
+            Installation
+          </button>
+        </div>
     </section>
-    <section id = "videos">
+    <div>
+      <section className="page-content">
+        { (tab === "INSTALL") &&
+          <section id="instructions">
+            <div className="text-panel">
+              <h3>Quick Setup <b className="recommended-tag">Recommended</b></h3>
+              <ol>
+                <li>Browse to this page in "Desktop Mode"</li>
+                <li>Choose a video and click "1-Click Copy"</li>
+                <li>Open the Konsole app</li>
+                <li>Paste and hit "Enter", then wait for the installation</li>
+                <li>Return to "Gaming Mode" & Visit <code>Settings &gt; Customization</code></li>
+                <li>Choose your Bootup Video</li>
+              </ol>
+            </div>
+            <div className="text-panel">
+              <h3>Manual Setup</h3>
+              <ol>
+                <li>Choose a video and click "Download"</li>
+                <li>Move the downloaded video to the following directory (create the folders below if they do not exist): 
+                  <code>
+                    home/deck/.steam/root/config/uioverrides/movies/
+                  </code>
+                </li>
+                <li>Return to "Gaming Mode" & Visit <code>Settings &gt; Customization</code>
+                </li>
+                <li>Choose your Bootup Video</li>
+              </ol>
+            </div>
+          </section>
+        }
+        { (tab === "BROWSE") &&
+          <section id="videos">
             <ul className="side-by-side">
-              { VideoPreviews.map(v => (
+              {VideoPreviews.map(v => (
                 <li key={v.iframeSrc}>
                   <VideoPreview
                     {...v}
@@ -85,9 +102,12 @@ const BootupVidsPage = () => (
                 </li>
               ))}
             </ul>
-    </section>
+          </section>
+        }
+      </section>
+    </div>
   </Layout>
-)
+)}
 
 export const Head = () => <Seo title="Bootup Vids" />
 
