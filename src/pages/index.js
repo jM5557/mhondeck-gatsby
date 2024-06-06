@@ -12,7 +12,7 @@ import release from "./../release.json";
 import ScrollReveal from "../components/scroll-reveal";
 import HomeGallery from "../components/home-gallery";
 
-const copyCommand = `wget -P -N /home/deck ${release.fullThemeDL} && unzip -o -d /home/deck /home/deck/homebrew`;
+const copyCommand = `wget -N -P /home/deck ${release.fullThemeDL} && unzip -o -d /home/deck /home/deck/homebrew`;
 
 const screenshots = [
     'home-screenshot.png',
