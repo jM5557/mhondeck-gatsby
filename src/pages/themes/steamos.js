@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 import logo from "../../images/logo.svg";
 import release from "../../release.json";
 
-const copyCommand = "wget -N -P /home/deck/Desktop https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/decky_installer.desktop && /home/deck/Desktop/decky_installer.desktop"
+const copyCommand = "curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh"
 
 const ThemesPage = () => {
     return (
