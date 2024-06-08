@@ -5,6 +5,7 @@ import CopyButton from "../../components/copy-button";
 import { Link } from "gatsby";
 import logo from "../../images/logo.svg";
 import release from "../../release.json";
+import Seo from "../../components/seo";
 
 const copyCommand = "curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh"
 
@@ -40,11 +41,14 @@ const ThemesPage = () => {
                                         <li>
                                             <h4>Decky Loader</h4>
                                             <p>
-                                                Plugin Shop/Utility for SteamOS. Install by copying the command below and pasting on the Konsole app in "Desktop Mode"
+                                                Plugin Shop/Utility for SteamOS. 
+                                                
+                                                <small>
+                                                    Install via "Desktop Mode" by copying the command below and pasting on the Konsole app
+                                                    <br />
 
-                                                <br />
-
-                                                To open Decky, click the ". . ." button and then the plug-shaped icon.
+                                                    Access Decky from the Quick Access Menu ("..." button or "Ctrl + 2" keys) &gt; Plug Icon
+                                                </small>
                                             </p>
                                             <div className="bottom">
                                                 <div className="copy-wrapper space-between">
@@ -58,8 +62,9 @@ const ThemesPage = () => {
                                             <h4>CSS Loader</h4>
                                             <p>
                                                 A Decky Plugin for customizing the SteamOS UI via several CSS theme options.
-                                                <br />
-                                                Search for and install CSS Loader via the Decky Shop (top-right)
+                                                <small>
+                                                    Install via Decky &gt; Shop (top-right icon)
+                                                </small>
                                             </p>
                                             <div className="bottom">    
                                                 <a href="https://docs.deckthemes.com/CSSLoader/Install/">
@@ -71,8 +76,10 @@ const ThemesPage = () => {
                                             <h4>Audio Loader</h4>
                                                 <p>
                                                     A Decky Plugin for customizing the SteamOS UI sound effects.
-                                                    <br />
-                                                    Search for and install CSS Loader via the Decky Shop (top-right)
+                                                    
+                                                    <small>
+                                                        Install via Decky &gt; Shop (top-right icon)
+                                                    </small>
                                                 </p>
                                                 <div className="bottom">    
                                                     <a href="https://docs.deckthemes.com/AudioLoader/Install/">
@@ -84,7 +91,7 @@ const ThemesPage = () => {
                                 </div>
 
                                 <div class="text-panel" id="setup-quick">
-                                    <h4>Quick Setup</h4>
+                                    <h4>Quick Setup & Update</h4>
 
                                     {/* <div class="video-wrapper">
                                         <div class="video-container">
@@ -94,19 +101,19 @@ const ThemesPage = () => {
 
                                     <ol>
                                         <li>
-                                            Access "Desktop Mode" (press and hold the power button to open the power menu)
+                                            Access "Desktop Mode"
                                         </li>
                                         <li>
                                             Visit <a href="/"> mhondeck.com </a> on a browser
                                         </li>
                                         <li>
-                                            Click on the "Copy" button for Quick Setup
+                                            Under Quick Setup click "Copy"
                                         </li>
                                         <li>
-                                            Search for the "Konsole" app
+                                            Open the "Konsole" app ("Steam Deck" icon start menu &gt; "System" &gt; "Konsole")
                                         </li>
                                         <li>
-                                            Click on the "Paste" button & hit Enter
+                                            Click on the "Paste" button, open the Keyboard ("Steam" + "X" buttons) & hit Enter
                                         </li>
                                     </ol>
                                 </div>
@@ -117,7 +124,7 @@ const ThemesPage = () => {
                                 
                                 <ScrollReveal>
                                     <div class="text-panel" id="setup-manual">
-                                        <h4>Manual Setup</h4>
+                                        <h4>Manual Setup & Update</h4>
 
                                         {/* <div class="video-wrapper">
                                             <div class="video-container">
@@ -127,13 +134,13 @@ const ThemesPage = () => {
 
                                         <ol>
                                             <li>
-                                                Access "Desktop Mode" (press and hold the power button to open the power menu)
+                                                Access "Desktop Mode"
                                             </li>
                                             <li>
-                                                Visit <a href="/"> mhondeck.com/themes/steamos </a> on a browser
+                                                Visit <a href="/themes/steamos"> mhondeck.com/themes/steamos </a> on a browser
                                             </li>
                                             <li>
-                                                Click "Download" and unzip the contents onto <code>home/deck/homebrew</code>
+                                                Click "Download" and unzip the contents onto <code>/home/deck/homebrew</code>
                                             </li>
                                         </ol>
                                     </div>
@@ -166,5 +173,6 @@ const ThemesPage = () => {
     )
 }
 
+export const Head = () => <Seo title="Steam UI Theme | SteamOS" />
 
 export default ThemesPage;

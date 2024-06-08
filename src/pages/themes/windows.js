@@ -3,6 +3,7 @@ import Layout from "../../components/layouts/layout"
 import { Link } from "gatsby";
 import logo from "../../images/logo.svg";
 import release from "../../release.json";
+import Seo from "../../components/seo";
 
 
 const ThemesWindowsPage = () => {
@@ -76,5 +77,6 @@ const ThemesWindowsPage = () => {
     )
 }
 
+export const Head = () => <Seo title="Steam UI Theme | Windows" />
 
 export default ThemesWindowsPage;

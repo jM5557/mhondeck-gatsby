@@ -269,6 +269,8 @@ section h2 {
                     background-color: $backgroundEndRGB;
                 }
 
+                small { font-size: small; display: block; background: $backgroundEndRGB; padding: $val4; margin-top: $val4;}
+
             }
             
             @media all and (max-width: 900px) {
