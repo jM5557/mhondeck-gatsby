@@ -10,22 +10,22 @@ const VideoPreviews = [
   {
     videoId: "apiqRmO9Xyo",
     videoTitle: "20th Anniversary - Hunters Intro (MH Logo - Sound)",
-    downloadLink: "https://www.mediafire.com/file_premium/1h2n4jy1p980fwk/MHOnDeck_-_20th_Anniversary_-_Hunters_Intro_-_OG_Logo_-_SOUND_-_3s.webm"
+    downloadLink: "https://www.dropbox.com/scl/fi/u6lp965argjj6biiq5u5i/MHOnDeck-20th-Anniversary-Hunters-Intro-OG-Logo-SOUND-3s.webm?rlkey=iqeqa8fnzaegzczlslzhm5x25&dl=1"
   },
   {
     videoId: "iRKbKtKe900",
     videoTitle: "20th Anniversary - Hunter's Intro (Anniversary Logo - Sound)",
-    downloadLink: "https://www.mediafire.com/file_premium/llovg70w7uxdcy3/MHOnDeck_-_20th_Anniversary_-_Hunters_Intro_-_20th_Logo_-_SOUND_-_3s.webm"
+    downloadLink: "https://www.dropbox.com/scl/fi/7cai2j50qsoyox7mp51b6/MHOnDeck-20th-Anniversary-Hunters-Intro-20th-Logo-SOUND-3s.webm?rlkey=022i9jhcp5j1j6zqwnbdtqc1z&dl=1"
   },
   {
     videoId: "c20UGlO2NOU",
     videoTitle: "20th Anniversary - Hunters Intro (No Logo - Sound)",
-    downloadLink: "https://www.mediafire.com/file_premium/0wj07a94q75na0u/MHOnDeck_-_20th_Anniversary_-_Hunters_Intro_-_NO_Logo_-_SOUND_-_3s.webm"
+    downloadLink: "https://www.dropbox.com/scl/fi/r06ow2ybojvkh4ovgu801/MHOnDeck-20th-Anniversary-Hunters-Intro-NO-Logo-SOUND-3s.webm?rlkey=plp3yjzpv89tmwb2hr2e4apqu&dl=1"
   },
   {
     videoId: "rlttqbAC1mk",
     videoTitle: "20th Anniversary - Hunter's Intro (MHOnDeck Logo - Sound)",
-    downloadLink: "https://www.mediafire.com/file_premium/eh4mbtwp6bwgh8o/MHOnDeck_-_20th_Anniversary_-_Hunters_Intro_-_MHOnDeck_Logo_-_SOUND_-_3s.webm"
+    downloadLink: "https://www.dropbox.com/scl/fi/6m869gc7rv1dehe7f9cyh/MHOnDeck-20th-Anniversary-Hunters-Intro-MHOnDeck-Logo-SOUND-3s.webm?rlkey=twg4dustxpfnvwauvjbb051w6&dl=1"
   }
 ]
 
