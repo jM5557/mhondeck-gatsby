@@ -67,16 +67,6 @@
             }
         }
 
-        @media screen and (max-width: 800px) {
-            display: block;
-            text-align: center;
-
-            .card {
-                margin: $val4 $val8;
-                display: block !important;
-            }
-        }
-
         &.side-by-side {
             justify-content: center;
         }
@@ -153,6 +143,24 @@
         .side-by-side {
             align-items: center;
             justify-content: flex-start;
+        }
+
+        @media screen and (max-width: 800px) {
+            display: block;
+            text-align: center;
+
+            .card {
+                margin: $val4 $val8;
+                box-sizing: border-box;
+            }
+
+            .cta {
+                
+                &:not(.small) {
+                    padding: $val4 $val2;
+                }
+            }
+    
         }
     }
 }

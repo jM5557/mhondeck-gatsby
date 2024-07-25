@@ -1,5 +1,12 @@
 .site-nav.space-between {
     justify-content: space-between;
+
+    @media  all and (max-width: 512px) {
+        .logo {
+            max-width: 80px;
+            margin-top: 4px;
+        }
+    }
     
     .sub-nav {
         img {
@@ -25,6 +32,17 @@
             a {
                 font-size: 0px;
                 margin: 16px 16px;
+            }
+        }
+
+        @media all and (max-width: 420px) {
+            a {
+                font-size: 0px;
+                margin: 8px 12px;
+
+                img {
+                    width: 24px;
+                }
             }
         }
     }

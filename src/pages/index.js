@@ -2,7 +2,7 @@ import * as React from "react"
 
 import Layout from "../components/layouts/layout"
 import Seo from "../components/seo";
-
+import logo from "../images/logo.svg"
 import CopyButton from "../components/copy-button";
 import { Link } from "gatsby";
 import release from "./../release.json";
@@ -32,6 +32,9 @@ const IndexPage = () => (
             <section class="main-section">
                 <div id="top">
                     <div class="headings">
+                        <Link href="/" className="logo">
+                            <img alt="MHOnDeck Logo" src={logo} />
+                        </Link>
                         <h1>Monster Hunting <br /><b>In Style</b></h1>
                         <h2>Custom Monster Hunter UI theme for Steam</h2>
                         <div className="bottom-bar side-by-side">

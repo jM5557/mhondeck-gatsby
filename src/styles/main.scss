@@ -121,14 +121,23 @@ ol {
 
     img {
         display: inline-block;
-        height: 240px;
         scroll-snap-align: center;
         margin: $val4;
         border-radius: $val2;
-
+        max-width: 270px;
         opacity: 0;
         box-shadow: 0px -10px 18px -8px #010101;
         animation: fadeIn 0.32s forwards 1;
+        vertical-align: middle;
+    }
+
+    @media all and (max-width: 580px) {
+        img {
+            display: block;
+            max-width: 80vw;
+            margin: 24px auto;
+            box-sizing: border-box;
+        }
     }
 }
 
@@ -515,14 +524,17 @@ section.hero {
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        flex-flow: row wrap;
         background-color: $backgroundEndRGB;
         background-color: rgba(28, 28, 32, 0.548);
-        padding: $val6;
+        padding: $val2 $val6;
         border-radius: $val2;
         box-shadow: 0px 0px 24px -12px #010101;
 
         & > * {
             margin-right: $val6;
+            margin-top: $val4;
+            margin-bottom: $val4;
 
             b { font-size: small; display: block; margin-bottom: $val2;color: $accentColor; font-weight: 600; text-transform: uppercase; }
         }
