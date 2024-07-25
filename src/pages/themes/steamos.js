@@ -6,6 +6,7 @@ import { Link } from "gatsby";
 import logo from "../../images/logo.svg";
 import release from "../../release.json";
 import Seo from "../../components/seo";
+import SiteNav from "../../components/site-nav";
 
 const copyCommand = "curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh"
 
@@ -13,14 +14,12 @@ const ThemesPage = () => {
     return (
         <Layout>
             <section className="hero">
-                <Link href = "/" className="logo">
-                    <img alt = "MHOnDeck Logo" src={logo} />
-                </Link>
+                <SiteNav />
                 <h1>
                     MHOnDeck UI Theme
                 </h1>
                 <h2>
-                    for Steam Deck (SteamOS)
+                    for SteamOS
                 </h2>
                 <div className="release-stats">
                     <a className="cta" href={release.fullThemeDL}>Download</a>
@@ -59,33 +58,18 @@ const ThemesPage = () => {
                                             <a href="https://decky.xyz/">Official Site</a>
                                         </li>
                                         <li>
-                                            <h4>CSS Loader</h4>
+                                            <h4>CSS Loader & Audio Loader</h4>
                                             <p>
-                                                A Decky Plugin for customizing the SteamOS UI via several CSS theme options.
+                                                Decky Plugins for customizing the SteamOS UI and SFX
                                                 <small>
                                                     Install via Decky &gt; Shop (top-right icon)
                                                 </small>
                                             </p>
                                             <div className="bottom">    
-                                                <a href="https://docs.deckthemes.com/CSSLoader/Install/">
+                                                <a href="https://docs.deckthemes.com">
                                                     Official Site
                                                 </a>
                                             </div>
-                                        </li>
-                                        <li>
-                                            <h4>Audio Loader</h4>
-                                                <p>
-                                                    A Decky Plugin for customizing the SteamOS UI sound effects.
-                                                    
-                                                    <small>
-                                                        Install via Decky &gt; Shop (top-right icon)
-                                                    </small>
-                                                </p>
-                                                <div className="bottom">    
-                                                    <a href="https://docs.deckthemes.com/AudioLoader/Install/">
-                                                        Official Site
-                                                    </a>
-                                                </div>
                                         </li>
                                     </ul>
                                 </div>

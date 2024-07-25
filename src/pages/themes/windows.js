@@ -4,15 +4,14 @@ import { Link } from "gatsby";
 import logo from "../../images/logo.svg";
 import release from "../../release.json";
 import Seo from "../../components/seo";
+import SiteNav from "../../components/site-nav";
 
 
 const ThemesWindowsPage = () => {
     return (
         <Layout>
             <section className="hero">
-                <Link href = "/" className="logo">
-                    <img alt = "MHOnDeck Logo" src={logo} />
-                </Link>
+                <SiteNav />
                 <h1>
                     MHOnDeck UI Theme
                 </h1>

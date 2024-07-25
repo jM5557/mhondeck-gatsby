@@ -1,10 +1,9 @@
 import * as React from "react"
-import logo from "../images/logo.svg"
 
 import Layout from "../components/layouts/layout"
 import Seo from "../components/seo"
 import VideoPreview from "../components/video-preview"
-import { Link } from "gatsby"
+import SiteNav from "../components/site-nav"
 
 const VideoPreviews = [
   {
@@ -29,24 +28,21 @@ const VideoPreviews = [
   }
 ]
 
-const BootupVidsPage = () => {
+const VideosPage = () => {
   const [tab, selectTab] = React.useState("BROWSE");
   const switchTab = (newTab = "BROWSE") => selectTab(newTab)
-  return (<Layout id="bootup-vids">
+  return (<Layout id="videos">
     <section className="hero">
-      <Link href="/" className="logo">
-        <img alt="MHOnDeck Logo" src={logo} />
-      </Link>
+      <SiteNav />
       <h1>
         Steam Bootup Videos
       </h1>
       <h2>
-        for Steam Deck (SteamOS)
+        for SteamOS
       </h2>
-      <div className="release-stats">
-        <p><b>Last Updated</b> 5.07.2024</p>
-      </div>
       <div className="release-stats tabs">
+        <p><b>Last Updated</b> 5.07.2024</p>
+        <div className="side-by-side">
           <button 
             onClick={() => switchTab("BROWSE")} 
             className={tab=="BROWSE"?"cta":"cta secondary"}
@@ -59,6 +55,7 @@ const BootupVidsPage = () => {
             Installation
           </button>
         </div>
+      </div>
     </section>
     <div>
       <section className="page-content">
@@ -70,8 +67,8 @@ const BootupVidsPage = () => {
                 <li>Browse to this page in "Desktop Mode"</li>
                 <li>Choose a video and click "1-Click Copy"</li>
                 <li>Open the Konsole app</li>
-                <li>Paste and hit "Enter", then wait for the installation</li>
-                <li>Return to "Gaming Mode" & Visit <code>Settings &gt; Customization</code></li>
+                <li>Paste and hit "Enter", then wait  to complete</li>
+                <li>Return to "Gaming Mode" and navigate to <code>Settings &gt; Customization</code></li>
                 <li>Choose your Bootup Video</li>
               </ol>
             </div>
@@ -84,7 +81,7 @@ const BootupVidsPage = () => {
                     home/deck/.steam/root/config/uioverrides/movies/
                   </code>
                 </li>
-                <li>Return to "Gaming Mode" & Visit <code>Settings &gt; Customization</code>
+                <li>Return to "Gaming Mode" and navigate to <code>Settings &gt; Customization</code>
                 </li>
                 <li>Choose your Bootup Video</li>
               </ol>
@@ -111,4 +108,4 @@ const BootupVidsPage = () => {
 
 export const Head = () => <Seo title="Bootup Vids" />
 
-export default BootupVidsPage
+export default VideosPage

@@ -14,7 +14,7 @@
 
 body {
     color: $foregroundRGB;
-    background: $backgroundStartRGB url("img/bg-blur.png") repeat-y center center;
+    background: $backgroundStartRGB url("img/bg-blur.png") repeat center center;
     background-size: 100% auto;
     font-family: 'Mulish', sans-serif;
     overflow: unset;
@@ -83,8 +83,9 @@ h3, h4 {
         font-size: small;
 
         &.recommended-tag {
-                background-color: $accentColor;
-                color: $backgroundStartRGB;
+                color: $accentColor;
+                border: solid thin;
+                background-color: transparent;
                 vertical-align: middle;
         }
     }
@@ -100,7 +101,7 @@ ol {
    }
    li:before {
      margin-right: $val4;
-     content: "Step 0" counter(item);
+     content: counter(item);
    }
  }
 
@@ -117,10 +118,6 @@ ol {
 .gallery {
     overflow-x: auto;
     text-align: center;
-    white-space: nowrap;
-    margin-top: -140px;
-    scroll-snap-type: x mandatory;
-    overscroll-behavior-x: contain;
 
     img {
         display: inline-block;
@@ -143,12 +140,12 @@ ol {
         width: 100%;
         box-sizing: border-box;
         margin: auto;
-        padding: 32px 0px;
+        padding: 0px 0px;
+        border-radius: 0px !important;
+        border-left: solid 4px $accentColor;
+        background-color: $backgroundStartRGB;
 
         li {
-            margin: $val4 auto;
-            border-left: solid 4px $accentColor;
-            background-color: $backgroundStartRGB;
             padding: $val6;
             flex: 1 1;
             min-width: 180px;
@@ -518,6 +515,11 @@ section.hero {
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        background-color: $backgroundEndRGB;
+        background-color: rgba(28, 28, 32, 0.548);
+        padding: $val6;
+        border-radius: $val2;
+        box-shadow: 0px 0px 24px -12px #010101;
 
         & > * {
             margin-right: $val6;
@@ -561,11 +563,17 @@ section.hero {
 }
 
 section.page-content {
+    margin-top: $val8;
+
     .text-panel {
         strong {
             font-weight: 700;
             text-transform: uppercase;
             color: $accentColor;
+        }
+
+        h3 {
+            font-size: 2rem;
         }
 
         h5 {
@@ -580,7 +588,7 @@ section.page-content {
             li {
                 text-align: left;
                 font-size: 1rem;
-                line-height: 1.5rem;
+                line-height: 1.10rem;
             }
             
             li:before {
@@ -588,13 +596,13 @@ section.page-content {
                 font-size: 1.25rem;
                 font-family: 'Akshar', sans-serif;
                 color: #ff530f;
-                display: block;
+                display: inline-block;
             }
         }
     }
 }
 
-#bootup-vids {
+#videos {
     header {
         text-align: center;
        
@@ -676,7 +684,6 @@ section.page-content {
 }
 
 .tabs {
-    margin-top: $val6;
 
     .cta {
         border-radius: 0px;

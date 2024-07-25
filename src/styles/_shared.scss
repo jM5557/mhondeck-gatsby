@@ -1,3 +1,39 @@
+.site-nav.space-between {
+    justify-content: space-between;
+    
+    .sub-nav {
+        img {
+            width: 40px;
+            display: block;
+            margin: auto auto 8px auto;
+        }
+    
+        a {
+            margin: 16px 24px;
+            text-align: center;
+
+            &:hover {
+                color: $accentColor;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            display: flex;
+        }
+
+        @media screen and (max-width: 640px) {
+            a {
+                font-size: 0px;
+                margin: 16px 16px;
+            }
+        }
+    }
+}
+
+.card {
+    position: relative;
+}
+
 .cta {
     &, &:visited {
        color: $backgroundEndRGB;
