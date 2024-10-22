@@ -1,0 +1,211 @@
+import CopyCommandInput from "@components/CopyCommandInput"
+import DownloadItem from "@components/DownloadItem"
+import releases from "@data/releases.json"
+
+<section className = "install">
+## Install
+### On SteamOS
+
+#### Prerequisite
+
+Enter "Desktop Mode" > Konsole app [Start Menu ("Steam Deck" Icon) > System]
+
+If "Decky Loader" is not installed yet, copy the command below, paste, and hit Enter
+
+<CopyCommandInput
+    copyCommand = { `curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh` }
+/>
+
+Alternatively, follow the steps from the Decky Loader GitHub:
+
+[https://github.com/SteamDeckHomebrew/decky-loader#user-content--installation](https://github.com/SteamDeckHomebrew/decky-loader#user-content--installation)
+
+
+#### Quick Setup
+
+Install (or update) the "MHOnDeck UI Theme" by copying the command:
+
+<CopyCommandInput
+    copyCommand = { `wget -N -P /home/deck https://www.dropbox.com/scl/fi/uvj2y305tf4ftnlnbyldj/homebrew.zip?rlkey=ephy3vcmzc4nz8udum0lt4sih&dl=1 && unzip -o -d /home/deck /home/deck/homebrew` }
+/>
+
+Paste onto the Konsole and hit Enter
+
+#### Manual Setup
+
+Download the "MHOnDeck UI Theme" below:
+
+<ul className="link-box">
+    <DownloadItem 
+        item = {releases.theme}
+        onClick = {props.setDownload}
+    />
+</ul>
+
+OR
+
+<ul className="link-box">
+    <DownloadItem 
+        item = {releases.css}
+        onClick = {props.setDownload}
+    />
+    <DownloadItem 
+        item = {releases.sfx}
+        onClick = {props.setDownload}
+    />
+</ul>
+
+Right-click and extract the contents of the downloaded file into the following folder:
+
+```/home/deck/homebrew```
+
+The final result should look like:
+
+```/home/deck/homebrew/sounds``` and ```/home/deck/homebrew/themes```
+</section>
+
+<section className = "install">
+## Install
+### On Windows
+
+#### Prerequisite
+
+If "Decky Loader" is not installed yet, download the following "Decky Loader" installer:
+
+<a 
+    className = "cta" 
+    href = "https://www.dropbox.com/scl/fi/7jfv18iiwxph38mohjhlw/decky.bat?rlkey=xyhlm295qo5yoxhioiu5dmev1&st=p01j9sm5&dl=1" 
+    download>decky.bat</a>
+
+Right-click and "Run as Administrator"
+
+#### Quick Setup
+
+Download the following "MHOnDeck UI Theme" installer:
+
+<a 
+    className = "cta" 
+    href = "https://www.dropbox.com/scl/fi/7jfv18iiwxph38mohjhlw/decky.bat?rlkey=xyhlm295qo5yoxhioiu5dmev1&st=p01j9sm5&dl=1" 
+    download>theme.bat</a>
+
+
+Right-click and "Run as Administrator"
+
+Follow the onscreen prompts (hit Enter to use default file/folder paths)
+
+Once the installation completes, the folder at ```Decky\PluginLoader_Win``` will open
+
+Run either ```PluginLoader.exe``` or ```PluginLoader_noconsole.exe``` (starts silently in the background)
+
+
+#### Manual Setup
+
+Navigate to your Steam installation location and create a blank file with the following name:
+
+<CopyCommandInput copyCommand = ".cef-enable-remote-debugging" />
+
+Make sure "File name extensions" is checked off at the top of the File Explorer under the "View" tab
+
+Alternatively, open the command prompt at this location and run:
+
+<CopyCommandInput copyCommand = {`type nul > \".cef-enable-remote-debugging\"`} />
+
+This enables CEF Remote Debugging and is *required*
+
+Next, copy and run the following command to setup Decky Loader (default location: Documents\Decky\PluginLoader_Win):
+
+<CopyCommandInput copyCommand = {`cd %USERPROFILE%\Documents && curl -L -o \"PluginLoader_Win.zip\" \"https://nightly.link/SteamDeckHomebrew/decky-loader/workflows/build-win/main/PluginLoader%20Win.zip\" && powershell -command \"Expand-Archive -Path 'PluginLoader_Win.zip' -DestinationPath '.\Decky\PluginLoader_Win'\" && del \"PluginLoader_Win.zip\" && echo Done! || echo Failed!`} />
+
+Next, download the latest MHOnDeck UI Theme
+
+<ul className="link-box">
+    <DownloadItem 
+        item = {releases.theme}
+        onClick = {props.setDownload}
+    />
+</ul>
+
+OR
+
+<ul className="link-box">
+    <DownloadItem 
+        item = {releases.css}
+        onClick = {props.setDownload}
+    />
+    <DownloadItem 
+        item = {releases.sfx}
+        onClick = {props.setDownload}
+    />
+</ul>
+
+Alternatively, run the following command (downloads and unpacks the "MHOnDeck UI Theme" into your ```%USERPROFILE%\homebrew``` folder):
+
+<CopyCommandInput
+    copyCommand={
+        `cd "%USERPROFILE%" && curl -L -o "homebrew.zip" "https://www.dropbox.com/scl/fi/uvj2y305tf4ftnlnbyldj/homebrew.zip?rlkey=ephy3vcmzc4nz8udum0lt4sih&dl=1" && powershell -command "Expand-Archive -Path 'homebrew.zip' -DestinationPath '.'" && echo Done! || echo Failed!`
+    }
+/>
+
+Next, open the folder: ```Decky\PluginLoader_Win```
+
+Run either ```PluginLoader.exe``` or ```PluginLoader_noconsole.exe``` (starts silently in the background)
+</section>
+
+<section className="install finalizing">
+## Finalizing
+
+Start Steam Big Picture Mode (Windows) or Gaming Mode (SteamOS)
+
+Open the Quick Access Menu (QAM) using the "Ctrl + 2" keys (or the "..." button on Steam Deck)
+
+Navigate to Decky (Plug icon) > "Decky Store" (top-right Shop-icon)
+
+Search for and install "CSS Loader" and "Audio Loader"
+
+Return to Decky > CSS Loader > Enable "MHOnDeck CSS Theme"
+
+Return to Decky > Audio Loader > Enable "MHOnDeck SFX Pack"
+
+Voila! You are now ready for the ultimate Monster Hunting experience!
+</section>
+
+<section className = "install uninstall">
+## Uninstalling
+
+### MHOnDeck UI Theme 
+
+Delete the following folders:
+
+#### SteamOS
+- ```/home/deck/homebrew/themes/MHOnDeck CSS Theme```
+- ```/home/deck/homebrew/sounds/MHOnDeck SFX Pack```
+
+#### Windows
+- ```%USERPROFILE%/homebrew/themes/MHOnDeck CSS Theme```
+- ```%USERPROFILE%/homebrew/sounds/MHOnDeck SFX Pack```
+
+Refresh "CSS Loader" and "Audio Loader" (or restart SteamOS/Big Picture Mode)
+
+### Decky Loader
+
+#### SteamOS
+Enter "Desktop Mode" > Konsole
+
+Copy, paste, and hit Enter to run the uninstaller:
+
+<CopyCommandInput
+    copyCommand = {`curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/uninstall.sh | sh`}
+/>
+
+Alternatively, follow the steps indicated in the Decky Loader GitHub:
+
+[https://github.com/SteamDeckHomebrew/decky-loader#user-content--uninstallation](https://github.com/SteamDeckHomebrew/decky-loader#user-content--uninstallation)
+
+#### Windows
+Download and run our (unofficial) "Decky Uninstaller" (as an Administrator):
+
+<a 
+    className = "cta" 
+    href = "https://www.dropbox.com/scl/fi/58p983c1e4oedlsoor6ab/uninstall_decky.bat?rlkey=9fg3la7f04488q7vamuk6pzui&st=nd44krx2&dl=1" 
+    download>uninstall_decky.bat</a>
+</section>

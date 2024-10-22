@@ -1,0 +1,96 @@
+---
+title: "MHOnDeck | FAQ - Frequently Asked Questions"
+---
+
+import Seo from "@components/seo";
+
+import Footer from "@components/footer";
+import Header from "@components/header";
+
+<Seo title = "MHOnDeck | FAQ - Frequently Asked Questions" />
+
+<main className="standard-page">
+    <section id="hero">
+        <Header />
+        
+# FAQ
+
+## Frequently Asked Questions
+    </section>
+<section id = "faq" className="large-text-list">
+- ### What is MHOnDeck?
+    MHOnDeck is a resource for customizing your Steam (and SteamOS) experience via a UI theme (CSS Theme & Sound Effects (SFX) Pack), Steam Bootup Videos, and Steam Grid game artwork. Everything in MHOnDeck is inspired by the aesthetics of the Monster Hunter series, transforming your gaming experience for optimal Monster Hunting!
+- ### Is the MHOnDeck UI Theme compatible with Windows?
+    Yes, the MHOnDeck UI Theme is supported on both SteamOS and Windows 10/11 via the Decky Plugin Loader
+- ### Are there any special requirements for using the MHOnDeck UI Theme?
+    Yes, to enable the "MHOnDeck CSS Theme" and "MHOnDeck SFX Pack", the following are required:
+        - Decky Loader – Utility used for installing and managing plugins. Access Decky by pressing the Quick Access Menu (“...”  triple-dot button on Steam Deck or "Ctrl + 2" keys on a keyboard)
+        - CSS Loader – Plugin for Decky that adds visual UI customization via CSS themes; This is required for the MHOnDeck CSS Theme that is included in the MHOnDeck UI Theme
+        - Audio Loader – Plugin for Decky that enables you to change sound effects for the Steam Deck UI. This is required for the MHOnDeck SFX Pack that is included in the the MHOnDeck UI Theme (SteamOS ONLY)
+    
+    Note: Decky Loader on Windows is experimental and not fully supported. Therefore, most plugins will not work. However, as of writing this guide October 2024, the CSS Loader and Audio Loader plugins work without issues.
+- ### What does the MHOnDeck SFX Pack replace?
+    The MHOnDeck SFX Pack replaces all default SteamOS/Steam Big Picture Mode SFX with 3rd Generation (i.e. Monster Hunter 3 Ultimate) SFX. Future plans include alternative options such as prior, current, and future generation SFX
+- ### What are Bootup Videos?
+    SteamOS supports customization of the short animation that plays when starting or suspending your Steam Deck (or SteamOS) compatible device. MHOnDeck includes a few options that you can download and drop into the following folder:
+    
+    #### Default location on SteamOS
+    ```home/deck/.steam/root/config/uioverrides/movies/```
+
+    #### Default location on Windows
+    ```Steam/config/uioverrides/movies/```
+
+    We also include a “Copy” button that copies an installation command onto your clipboard. 
+    
+    On SteamOS, enter "Desktop Mode", visit the installation page, and press the "Copy" button to open the Konsole app. Paste, hit Enter, and then wait until the bootup video downloads and is transferred into the folder path above.
+    
+    The bootup video can be enabled from Steam "Gaming Mode"/"Big Picture Mode":
+    
+    ```Settings > Customization```
+- ### Are the Bootup Videos compatible with Windows?
+    Yes, simply drag and drop a *.webm video file onto the folder as indicated above, (or create these folders first)
+- ### What is Steam Grid Artwork?
+    Steam supports customization of game artwork within its platform, visible from your Steam Library. Steam Grid Artwork includes the following:
+    
+    - Grid: Poster artwork visible from the SteamOS Library or from a Steam collection page
+    - Hero: Banner artwork featured from the game page
+    - Icon: Visible from the Steam Library or when opening the Steam Menu while running a game on SteamOS Gaming Mode or Steam Big Picture Mode
+    - Logo: Visible from the game page
+    
+    MHOnDeck features Steam Grid Artwork for all Monster Hunter games that are currently playable in some form on Steam Deck. 
+    
+    The goal is to have every playable Monster Hunter game look as official as possible in your Steam Library in order to create the ultimate/seamless Monster Hunting experience.
+- ### Is Steam Grid Artwork compatible with Windows?
+    Yes, Steam Grid Artwork is compatible with both SteamOS and Windows 10/11. On SteamOS, we recommend the Decky Loader utility and the SteamGridDB plugin for Decky. On Windows, game icons can only be modified for non-Steam games. 
+    See [mhondeck.com/games](#https://mhondeck.games) for installation instructions and a full list of games with artwork for download.
+- ### Where is MHOnDeck’s Steam Grid Artwork sourced from?
+    Most artwork has been obtained from official Monster Hunter websites for the 10th and 20th anniversaries or from Twitter user [Daily MonHun Visuals](https://twitter.com/DaiMonHunVis)
+    
+    Artwork for grids were edited by myself. Artwork for icons were obtained directly from each game title utilizing tools for extraction. 
+    Some were edited to fit the square dimensions of a typical Steam game icon.
+- ### Is MHOnDeck supported on Bazzite?
+    We have not tested MHOnDeck on Bazzite or any SteamOS-based OS variation. In theory if Decky Loader and the necessary plugins function identically as in SteamOS, it *should* work but this is not a guarantee.
+- ### Where is the MHOnDeck UI Theme located in storage?
+    
+    #### Windows
+
+    Audio Loader SFX:
+
+    ```%UserProfile%\homebrew\sounds```
+
+    CSS Loader Themes:
+
+    ```%UserProfile%\homebrew\themes```
+
+    #### SteamOS
+
+    Audio Loader SFX:
+
+    ```/home/deck/homebrew/sounds/```
+
+    CSS Loader Themes:
+
+    ```/home/deck/homebrew/themes/```
+</section>
+    <Footer />
+</main>

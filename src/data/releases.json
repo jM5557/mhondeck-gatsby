@@ -1,0 +1,23 @@
+{
+  "version": "1.1.00",
+  "theme": {
+    "title": "MHOnDeck UI Theme",
+    "url": "https://www.dropbox.com/scl/fi/uvj2y305tf4ftnlnbyldj/homebrew.zip?rlkey=ephy3vcmzc4nz8udum0lt4sih&dl=1",
+    "fileSize": "24.5 MB"
+  },
+  "css": {
+    "title": "MHOnDeck CSS Theme",
+    "url": "https://www.dropbox.com/scl/fi/ioke37637ajw4kqt31aje/MHOnDeck-CSS-Theme.zip?rlkey=o3r0odmq1zl48amf0lnxitgeu&dl=1",
+    "fileSize": "23.1 MB"
+  },
+  "sfx": {
+    "title": "MHOnDeck SFX Pack",
+    "url": "https://www.dropbox.com/scl/fi/i7c92ekrn7w55ozebmvt2/MHOnDeck-SFX-Pack.zip?rlkey=4rsnhjjs5jmm339rcfedcufo5&dl=1",
+    "fileSize": "1.32 MB"
+  },
+  "games": {
+    "title": "Steam Grid Artwork",
+    "url": "https://www.dropbox.com/scl/fo/ss37zk1a7b2xdqa2ng8w0/APqros5Xgn7GWeNpIlUsNpw?rlkey=oh5k0dml8o39a485lik5pfj2b&st=ggheqpi1&dl=1",
+    "fileSize": "111 MB"
+  }
+}

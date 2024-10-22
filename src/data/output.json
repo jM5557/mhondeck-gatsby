@@ -1,0 +1,629 @@
+{
+  "airoupuzzle": {
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon-144.png",
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mh1": {
+    "demo": {
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.png"
+    ],
+    "icon": [
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mh2": {
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mh3": {
+    "demo": {
+      "grid": [
+        "grid.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon-192.png",
+      "icon.png"
+    ],
+    "logo": [
+      "logo-2.png",
+      "logo.png"
+    ]
+  },
+  "mh3g": {
+    "3ds": {
+      "demo": {
+        "grid": [
+          "grid.png"
+        ],
+        "logo": [
+          "logo-2.png"
+        ]
+      },
+      "grid": [
+        "grid.png"
+      ],
+      "hero": [
+        "hero.png"
+      ],
+      "icon": [
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "wiiu": {
+      "demo": {
+        "grid": [
+          "grid.png"
+        ],
+        "logo": [
+          "logo.png"
+        ]
+      },
+      "grid": [
+        "grid.png"
+      ],
+      "hero": [
+        "hero.png"
+      ],
+      "icon": [
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    }
+  },
+  "mh3u": {
+    "3ds": {
+      "demo": {
+        "grid": [
+          "grid.png"
+        ],
+        "icon": [
+          "icon.png"
+        ],
+        "logo": [
+          "logo.png"
+        ]
+      },
+      "grid": [
+        "grid.png"
+      ],
+      "icon": [
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "wiiu": {
+      "demo": {
+        "grid": [
+          "grid.png"
+        ],
+        "icon": [
+          "icon.png"
+        ],
+        "logo": [
+          "logo.png"
+        ]
+      },
+      "grid": [
+        "grid.png"
+      ],
+      "icon": [
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    }
+  },
+  "mh4": {
+    "demo": {
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon.png"
+    ],
+    "logo": [
+      "logo-2.png",
+      "logo.png"
+    ]
+  },
+  "mh4g": {
+    "demo": {
+      "grid": [
+        "grid.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mh4u": {
+    "demo": {
+      "grid": [
+        "grid.png"
+      ],
+      "icon": [
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "grid": [
+      "grid-2.png",
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon-2.png",
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mhdiary": {
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon-144.png",
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mhdiarydx": {
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mhdiaryg": {
+    "grid": [
+      "grid-2.png",
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon-144.png",
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mhf1": {
+    "grid": [
+      "grid-2.png",
+      "grid-3.png",
+      "grid.png"
+    ],
+    "hero": [
+      "hero.png"
+    ],
+    "icon": [
+      "icon-144.PNG",
+      "icon.PNG"
+    ],
+    "logo": [
+      "logo-2.png",
+      "logo.png"
+    ]
+  },
+  "mhf2": {
+    "grid": [
+      "grid-2.png",
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon-144.png",
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mhfu": {
+    "demo": {
+      "grid": [
+        "grid-2.png"
+      ],
+      "logo": [
+        "logo-2.png"
+      ]
+    },
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon-144.png",
+      "icon.png"
+    ],
+    "logo": [
+      "logo-2.png",
+      "logo-3.png",
+      "logo.png"
+    ]
+  },
+  "mhg": {
+    "ps2": {
+      "grid": [
+        "grid.png"
+      ],
+      "hero": [
+        "hero.png"
+      ],
+      "icon": [
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "wii": {
+      "grid": [
+        "grid.png"
+      ],
+      "hero": [
+        "hero-2.jpg",
+        "hero.jpg"
+      ],
+      "icon": [
+        "icon-192.png",
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    }
+  },
+  "mhgen": {
+    "demo": {
+      "icon": [
+        "icon-2.png",
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mhgu": {
+    "demo": {
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mhp1": {
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero-2.png",
+      "hero.png"
+    ],
+    "icon": [
+      "icon-144.png",
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mhp2": {
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mhp2g": {
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon-2-144.png",
+      "icon-2.png",
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mhp3rd": {
+    "ps3": {
+      "grid": [
+        "grid.png"
+      ],
+      "hero": [
+        "hero.jpg"
+      ],
+      "icon": [
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "psp": {
+      "demo": {
+        "grid": [
+          "grid.png"
+        ],
+        "logo": [
+          "logo.png"
+        ]
+      },
+      "grid": [
+        "grid.png"
+      ],
+      "hero": [
+        "hero.jpg"
+      ],
+      "icon": [
+        "icon-144.png",
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    }
+  },
+  "mhrise": {
+    "grid": [
+      "grid-2.jpg"
+    ],
+    "hero": [
+      "hero.png"
+    ]
+  },
+  "mhst": {
+    "3ds": {
+      "grid": [
+        "grid.png"
+      ],
+      "hero": [
+        "hero.jpg"
+      ],
+      "icon": [
+        "icon-2.png",
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "mobile": {
+      "grid": [
+        "grid.png"
+      ],
+      "hero": [
+        "hero.jpg"
+      ],
+      "icon": [
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    }
+  },
+  "mhx": {
+    "demo": {
+      "grid": [
+        "grid.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
+  "mhxx": {
+    "3ds": {
+      "demo": {
+        "grid": [
+          "grid.png"
+        ],
+        "icon": [
+          "icon.png"
+        ],
+        "logo": [
+          "logo.png"
+        ]
+      },
+      "grid": [
+        "grid.png"
+      ],
+      "hero": [
+        "hero.jpg"
+      ],
+      "icon": [
+        "icon-2.png",
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    },
+    "switch": {
+      "demo": {
+        "grid": [
+          "grid.png"
+        ],
+        "logo": [
+          "logo.png"
+        ]
+      },
+      "grid": [
+        "grid.png"
+      ],
+      "hero": [
+        "hero.jpg"
+      ],
+      "icon": [
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    }
+  },
+  "mhpuzzles": {
+    "v1.01.00": {
+      "icon": [
+        "icon.png"
+      ]
+    },
+    "v2.00.02": {
+      "icon": [
+        "icon.png"
+      ],
+      "grid": [
+        "grid.png"
+      ]
+    },
+    "v2.02.00": {
+      "hero": [
+        "hero.png"
+      ]
+    },
+    "logo": [
+      "logo.png"
+    ]
+  }
+}

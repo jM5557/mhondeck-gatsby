@@ -1,0 +1,42 @@
+{
+  "ps2": {
+    "fullname": "PlayStation 2",
+    "abbreviation": "PS2"
+  },
+  "psp": {
+    "fullname": "PlayStation Portable",
+    "abbreviation": "PSP"
+  },
+  "ps3": {
+    "fullname": "PlayStation 3",
+    "abbreviation": "PS3"
+  },
+  "wii": {
+    "fullname": "Nintendo Wii",
+    "abbreviation": "Wii"
+  },
+  "3ds": {
+    "fullname": "Nintendo 3DS",
+    "abbreviation": "3DS"
+  },
+  "wiiu": {
+    "fullname": "Nintendo Wii U",
+    "abbreviation": "Wii U"
+  },
+  "switch": {
+    "fullname": "Nintendo Switch",
+    "abbreviation": "Switch"
+  },
+  "pc": {
+    "fullname": "PC/Steam",
+    "abbreviation": "PC"
+  },
+  "ios": {
+    "fullname": "iOS",
+    "abbreviation": "iOS"
+  },
+  "android": {
+    "fullname": "Android",
+    "abbreviation": "Android"
+  }
+}

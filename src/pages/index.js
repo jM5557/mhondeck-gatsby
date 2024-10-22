@@ -1,128 +1,71 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
-import Layout from "../components/layout"
+import React from "react"
+import "@styles/main.scss"
+import heroBg from "@images/bg.jpg"
+import heroshot from "@images/home/hero-shot.png"
+import Footer from "../components/footer"
+import Header from "../components/header"
+import games from "@data/games.json"
+import GridImages from "../components/GridImages"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
+export default function Home() {
+  const getRandomEntries = (array) => {
+    const randomIndexes = [];
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
+    // Generate 4 unique random indexes
+    while (randomIndexes.length < 4) {
+      const randomIndex = Math.floor(Math.random() * array.length);
+      if (!randomIndexes.includes(randomIndex)) {
+        randomIndexes.push(randomIndex);
+      }
+    }
 
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
+    // Return the array elements at those indexes
+    return randomIndexes.map(index => array[index]);
+  }
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+  const _games = getRandomEntries(Object.entries(games));
 
-const IndexPage = () => (
-  <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
-  </Layout>
-)
+  return (
+    <main>
+      <section id="hero">
+        <Header />
+        <div id="featured-wrapper">
+          <div id="featured">
+            <h1>Monster Hunter UI Theme</h1>
+            <h2>For Steam</h2>
+            <a href = "/ui/theme" className="cta">Get Started</a>
+          </div>
+          <img alt="UI Theme" src={heroshot} className="hero-shot" />
+        </div>
+      </section>
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />
+      <section id="games">
+        <h5>New</h5>
+        <h3>Steam Grid Artwork</h3>
+        <div className="flex space-s align-s">
+          <GridImages games={_games} />
+          <a href="/games" className="cta secondary">See All</a>
+        </div>
+      </section>
 
-export default IndexPage
+      <section id="videos">
+        <div className="preview">
+          <div className="thumb">
+            <img alt="Preview thumbnail" src={heroBg} />
+          </div>
+          <div className="description">
+            <h5>Featured</h5>
+            <h3>Bootup Videos</h3>
+            <h4>for Steam</h4>
+            <a href="/videos" className="cta">Browse</a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+
+      <Seo title = "Monster Hunter UI Theme for Steam & More" />
+    </main>
+  )
+}
