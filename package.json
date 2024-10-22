@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "MHOnDeck",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A Monster Hunter Steam Customization Suite",
+  "version": "2.0.0",
+  "author": "Javier Minchala <mhondeck.site@gmail.com>",
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
     "gatsby": "^5.13.7",
@@ -16,6 +16,7 @@
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
+    "gh-pages": "^6.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.79.4"
@@ -33,7 +34,8 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build && gh-pages -d public"
   },
   "repository": {
     "type": "git",

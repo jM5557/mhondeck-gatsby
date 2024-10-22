@@ -10,7 +10,7 @@
 module.exports = {
   siteMetadata: {
     title: `MHOnDeck`,
-    description: `Monster Hunter Steam Customization Suite`,
+    description: `A Monster Hunter Steam Customization Suite`,
     author: `@jM5557`,
     siteUrl: `https://mhondeck.com`,
   },
