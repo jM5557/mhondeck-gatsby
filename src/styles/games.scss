@@ -4,7 +4,7 @@
   #hero {
     position: relative;
     min-height: 30svh !important;
-    padding-bottom: 100px;
+    padding-bottom: 100px !important;
 
     & > * {
       position: relative;
@@ -19,9 +19,9 @@
   .search {
     background: $mid-dark;
     border: solid thin $lighter-dark;
-    padding: 16px 12px;
-    border-radius: 8px;
-    font-size: 2rem;
+    border-radius: 300px;
+    padding: 24px 16px;
+    font-size: 1.5rem;
     color: $lightest;
     display: block;
     width: 80%;

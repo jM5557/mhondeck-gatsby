@@ -58,7 +58,7 @@ const GamePage = ({ params }) => {
 
   return (
     <main
-      className="game-page"
+      className="game-page standard-page"
     >
       <section
         id="hero"
