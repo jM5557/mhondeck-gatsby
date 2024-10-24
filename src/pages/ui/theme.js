@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import Header from "@components/header";
-import CopyCommandInput from "@components/CopyCommandInput";
-import { commands } from "@data/commands";
 import "@styles/theme.scss"
 import Footer from "@components/footer";
 import Seo from "@components/seo";
 import { UseModal } from "@components/Modals";
 import DownloadWindow from "@components/DownloadWindow";
-import UIThemeInstallation from "@content/UIThemeInstallation";
-import releases from "@data/releases.json"
+
+import Windows from "@content/UI Theme/Windows";
+import SteamOS from "@content/UI Theme/SteamOS";
+import Finalizing from "@content/UI Theme/Finalizing";
+import Uninstall from "@content/UI Theme/Uninstall";
 
 const Theme = () => {
     const {
@@ -28,12 +29,15 @@ const Theme = () => {
         setDownloadModal(false);
     }
 
+    const [platform, setPlatform] = useState("STEAMOS");
+
     return (
         <main className="standard-page">
             <section id="hero" className="theme-hero">
                 <Header />
 
-                <h1>UI Theme for Steam</h1>
+                <h1>MHOnDeck UI Theme</h1>
+                <h2>for Steam</h2>
 
                 <div className="details">
                     <div className="detail">
@@ -42,8 +46,30 @@ const Theme = () => {
                     </div>
                 </div>
             </section>
-            <div className="flex ui-theme-content">
-                <UIThemeInstallation setDownload = { (item) => setDownload(item) } />
+            <div className="ui-theme-content">
+                <section className="install per-platform">
+                    <h2 className="flex space-b align-c with-tabs">
+                        <span>Installation</span>
+                        <div className="flex space-b">
+                            <button 
+                                type = "button"
+                                onClick={()=>setPlatform("STEAMOS")}
+                                className={platform === "STEAMOS" ? "cta" : "cta secondary"}
+                            >SteamOS</button>
+                            <button 
+                                type = "button"
+                                onClick={()=>setPlatform("WINDOWS")}
+                                className={platform === "WINDOWS" ? "cta" : "cta secondary"}
+                            >Windows</button>
+                        </div>
+                    </h2>
+                    { (platform === "STEAMOS")
+                        ? (<SteamOS setDownload = { (item) => setDownload(item) } />)
+                        : (<Windows setDownload = { (item) => setDownload(item) } />)
+                    }
+                </section>
+                <Finalizing />
+                <Uninstall />
             </div>
             <Footer />
 

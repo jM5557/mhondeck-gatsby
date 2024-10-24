@@ -16,6 +16,14 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
+      }
+    },
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,

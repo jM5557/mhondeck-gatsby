@@ -1,0 +1,65 @@
+import CopyCommandInput from "@components/CopyCommandInput"
+import DownloadItem from "@components/DownloadItem"
+import releases from "@data/releases.json"
+
+### On SteamOS
+
+#### Prerequisite
+
+Enter "Desktop Mode" > Konsole app [Start Menu ("Steam Deck" Icon) > System]
+
+If "Decky Loader" is not installed yet, copy the command below, paste, and hit Enter
+
+<CopyCommandInput
+    copyCommand = { `curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh` }
+/>
+
+Alternatively, follow the steps from the Decky Loader GitHub:
+
+[https://github.com/SteamDeckHomebrew/decky-loader#user-content--installation](https://github.com/SteamDeckHomebrew/decky-loader#user-content--installation)
+
+
+#### Quick Setup
+
+Install (or update) the "MHOnDeck UI Theme" by copying the command:
+
+<CopyCommandInput
+    copyCommand = { `wget -N -P /home/deck https://www.dropbox.com/scl/fi/uvj2y305tf4ftnlnbyldj/homebrew.zip?rlkey=ephy3vcmzc4nz8udum0lt4sih&dl=1 && unzip -o -d /home/deck /home/deck/homebrew` }
+/>
+
+Paste onto the Konsole and hit Enter
+
+<br />
+<br />
+
+#### Manual Setup
+
+Download the "MHOnDeck UI Theme" below:
+
+<ul className="link-box">
+    <DownloadItem 
+        item = {releases.theme}
+        onClick = {props.setDownload}
+    />
+</ul>
+
+OR
+
+<ul className="link-box">
+    <DownloadItem 
+        item = {releases.css}
+        onClick = {props.setDownload}
+    />
+    <DownloadItem 
+        item = {releases.sfx}
+        onClick = {props.setDownload}
+    />
+</ul>
+
+Right-click and extract the contents of the downloaded file into the following folder:
+
+```/home/deck/homebrew```
+
+The final result should look like:
+
+```/home/deck/homebrew/sounds``` and ```/home/deck/homebrew/themes```
