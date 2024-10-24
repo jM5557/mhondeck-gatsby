@@ -40,11 +40,11 @@ const GamesPage = () => {
     } = releases.games;
 
     return (
-        <main className="game-page all-games">
-            <section id="hero" className="games-hero">
+        <main className="game-page standard-page">
+            <section id="hero" className="">
                 <Header />
                 <h1>Steam Grid Artwork</h1>
-                <h2>Choose a game to view its SteamOS or Steam Big Picture mode artwork options</h2>
+                <h2>Choose a game to view its SteamOS or Steam Big Picture mode artwork</h2>
                 <button
                     type="button"
                     onClick={() => setDownloadModal(!downloadModal)}

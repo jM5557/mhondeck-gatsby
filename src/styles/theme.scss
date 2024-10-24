@@ -11,10 +11,11 @@
     }
 
     h2 {
-        font-size: 2.5rem;
         font-weight: 400;
         margin-bottom: 24px;
-    }
+        max-width: 320px;
+        font-size: 1.5rem;
+      }
 
     .details {
         display: flex;

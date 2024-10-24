@@ -85,7 +85,7 @@ const GamePage = ({ params }) => {
         <div className="artwork-text">
           <div>
             <h2>Steam Grid Artwork</h2>
-            <h3>Use with the SteamGridDB Plugin for Decky Loader on Steam Deck</h3>
+            <h3>Use with the SteamGridDB Plugin for Decky Loader</h3>
           </div>
 
           { (games[id].artwork) &&

@@ -229,6 +229,7 @@ svg .cls-1 {
     height: 100svh;
     width: 100vw;
     max-width: unset;
+    max-height: unset;
     border-radius: 0px;
     display: flex;
     align-items: center;
@@ -526,14 +527,6 @@ svg .cls-1 {
   flex-flow: row wrap;
   margin: 2.5% auto;
   min-height: 640px;
-}
-
-.all-games {
-  #hero h2 {
-    font-weight: 400;
-    max-width: 320px;
-    margin-bottom: 24px;
-  }
 }
 
 // Games section

@@ -33,11 +33,11 @@ const Theme = () => {
 
     return (
         <main className="standard-page">
-            <section id="hero" className="theme-hero">
+            <section id="hero" className="">
                 <Header />
 
                 <h1>MHOnDeck UI Theme</h1>
-                <h2>for Steam</h2>
+                <h2>Contains a visual UI overhaul theme and a Sound FX replacement pack</h2>
 
                 <div className="details">
                     <div className="detail">

@@ -35,7 +35,7 @@ const VideosPage = () => {
         Bootup Videos
       </h1>
       <h2>
-        for Steam
+        Videos that play when Gaming Mode or Steam Big Picture Mode starts up
       </h2>
       <button 
         type = "button"
@@ -75,7 +75,7 @@ const VideosPage = () => {
       </DownloadModalComponent>
     }
     <Footer />
-    <Seo title = "Bootup Videos for SteamOS" />
+    <Seo title = "Bootup Videos for Steam" />
   </main>
   )
 }
