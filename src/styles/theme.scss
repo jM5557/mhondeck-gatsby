@@ -76,8 +76,8 @@
     }
 
     p {
-        line-height: 1.75rem;
-        margin-top: 16px;
+        line-height: 1.5rem;
+        margin-top: 8px;
     }
 
     ul {
@@ -114,8 +114,33 @@
     }
 }
 
+.prereq {
+    border-radius: 4px;
+    padding-left: 16px;
+    border: solid thin $light-dark;
+    padding-bottom: 16px;
+    margin-top: 16px;
+}
+
+.note {
+    background-color: rgb(35, 108, 255);
+    color: rgb(20, 6, 40);
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-top: 8px;
+
+    code {
+        background-color: rgb(30, 98, 232);
+        font-size: 1rem;
+        color: rgb(20, 6, 40);
+        font-weight: bolder;
+        display: table;
+        padding: 4px;
+    }
+}
+
 .install {
-    padding: 0px 24px 16px 24px;
+    padding: 0px 24px 24px 24px;
     flex: 1 1 45%;
     max-width: 720px;
 
@@ -125,7 +150,7 @@
     }
 
     background-color: $mid-dark;
-    margin: 16px 0px 16px 0px;
+    margin: 16px auto;
     border-radius: 8px;
 
     & > .cta {

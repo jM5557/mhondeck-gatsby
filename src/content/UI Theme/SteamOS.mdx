@@ -4,37 +4,42 @@ import releases from "@data/releases.json"
 
 ### On SteamOS
 
+<div className="prereq">
 #### Prerequisite
+Enter "Desktop Mode"
 
-Enter "Desktop Mode" > Konsole app [Start Menu ("Steam Deck" Icon) > System]
+Open the Konsole app (Start Menu > System)
 
-If "Decky Loader" is not installed yet, copy the command below, paste, and hit Enter
+Install **Decky Loader** (Plugin utility):
 
 <CopyCommandInput
     copyCommand = { `curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh` }
 />
 
+Copy the command above, paste into the Konsole, and hit Enter to install
+
 Alternatively, follow the steps from the Decky Loader GitHub:
 
 [https://github.com/SteamDeckHomebrew/decky-loader#user-content--installation](https://github.com/SteamDeckHomebrew/decky-loader#user-content--installation)
-
-
+</div>
+<br />
+<br />
 #### Quick Setup
 
-Install (or update) the "MHOnDeck UI Theme" by copying the command:
+"MHOnDeck UI Theme" Installer:
 
 <CopyCommandInput
     copyCommand = { `wget -N -P /home/deck https://www.dropbox.com/scl/fi/uvj2y305tf4ftnlnbyldj/homebrew.zip?rlkey=ephy3vcmzc4nz8udum0lt4sih&dl=1 && unzip -o -d /home/deck /home/deck/homebrew` }
 />
 
-Paste onto the Konsole and hit Enter
+Copy and paste onto the Konsole and hit Enter
 
 <br />
 <br />
 
 #### Manual Setup
 
-Download the "MHOnDeck UI Theme" below:
+Download the "MHOnDeck UI Theme":
 
 <ul className="link-box">
     <DownloadItem 
