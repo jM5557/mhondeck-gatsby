@@ -52,6 +52,9 @@
       "grid": [
         "grid.png"
       ],
+      "hero": [
+        "hero.jpg"
+      ],
       "logo": [
         "logo.png"
       ]
@@ -123,6 +126,9 @@
         "grid": [
           "grid.png"
         ],
+        "hero": [
+          "hero.jpg"
+        ],
         "icon": [
           "icon.png"
         ],
@@ -131,7 +137,11 @@
         ]
       },
       "grid": [
+        "grid-2.png",
         "grid.png"
+      ],
+      "hero": [
+        "hero.jpg"
       ],
       "icon": [
         "icon.png"
@@ -145,6 +155,9 @@
         "grid": [
           "grid.png"
         ],
+        "hero": [
+          "hero.jpg"
+        ],
         "icon": [
           "icon.png"
         ],
@@ -153,7 +166,11 @@
         ]
       },
       "grid": [
+        "grid-2.png",
         "grid.png"
+      ],
+      "hero": [
+        "hero.jpg"
       ],
       "icon": [
         "icon.png"
@@ -165,6 +182,9 @@
   },
   "mh4": {
     "demo": {
+      "hero": [
+        "hero.jpg"
+      ],
       "logo": [
         "logo.png"
       ]
@@ -245,6 +265,9 @@
     ],
     "logo": [
       "logo.png"
+    ],
+    "wp": [
+      "wp.jpg"
     ]
   },
   "mhdiarydx": {
@@ -466,6 +489,9 @@
       ],
       "logo": [
         "logo.png"
+      ],
+      "mhp3rd": [
+        "mhp3rd-logo.png"
       ]
     },
     "psp": {
@@ -489,6 +515,29 @@
       ],
       "logo": [
         "logo.png"
+      ]
+    }
+  },
+  "mhpuzzles": {
+    "logo": [
+      "logo.png"
+    ],
+    "v1.01.00": {
+      "icon": [
+        "icon.png"
+      ]
+    },
+    "v2.00.02": {
+      "grid": [
+        "grid.png"
+      ],
+      "icon": [
+        "icon.png"
+      ]
+    },
+    "v2.02.00": {
+      "hero": [
+        "hero.png"
       ]
     }
   },
@@ -553,7 +602,7 @@
       "logo.png"
     ]
   },
-  "mhxx": {
+    "mhxx": {
     "3ds": {
       "demo": {
         "grid": [
@@ -602,28 +651,5 @@
         "logo.png"
       ]
     }
-  },
-  "mhpuzzles": {
-    "v1.01.00": {
-      "icon": [
-        "icon.png"
-      ]
-    },
-    "v2.00.02": {
-      "icon": [
-        "icon.png"
-      ],
-      "grid": [
-        "grid.png"
-      ]
-    },
-    "v2.02.00": {
-      "hero": [
-        "hero.png"
-      ]
-    },
-    "logo": [
-      "logo.png"
-    ]
   }
 }

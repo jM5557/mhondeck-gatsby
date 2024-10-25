@@ -125,8 +125,9 @@
 .prereq {
     border-radius: 4px;
     padding-left: 16px;
-    border: solid thin $light-dark;
-    padding-bottom: 16px;
+    background-color: $light-dark;
+    padding-top: 2px;
+    padding-bottom: 20px;
     margin-top: 16px;
 }
 

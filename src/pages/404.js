@@ -1,12 +1,17 @@
-import * as React from "react"
-import Seo from "../components/seo"
+import React from "react";
 
-const NotFoundPage = () => (
-  <main>
-    <h1>404 Page Not Found</h1>
-  </main>
-)
+const ErrorPage = () => {
+  const browser = typeof window !== "undefined" && window;
 
-export const Head = () => <Seo title="404 Page Not Found" />
+  return (
+    <>
+      {browser && (
+        <>
+            <h1>Page Not Found</h1>
+        </>
+      )}
+    </>
+  );
+};
 
-export default NotFoundPage
+export default ErrorPage;

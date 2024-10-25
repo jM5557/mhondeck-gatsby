@@ -78,6 +78,17 @@
     color: $accent-color;
   }
 
+  .box {
+    padding: 8px 16px;
+    background-color: $mid-dark;
+    border-radius: 4px;
+
+    .box {
+      background-color: $light-dark;
+      margin-top: 8px;
+    }
+  }
+
   .subfolder-images {
     margin-bottom: 8px;
 
@@ -106,6 +117,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 16px;
+    flex-flow: row wrap;
   }
 
   .group {
