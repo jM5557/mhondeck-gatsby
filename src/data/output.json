@@ -265,9 +265,6 @@
     ],
     "logo": [
       "logo.png"
-    ],
-    "wp": [
-      "wp.jpg"
     ]
   },
   "mhdiarydx": {
@@ -339,6 +336,9 @@
       "grid": [
         "grid-2.png"
       ],
+      "hero": [
+        "hero.jpg"
+      ],
       "logo": [
         "logo-2.png"
       ]
@@ -379,7 +379,6 @@
         "grid.png"
       ],
       "hero": [
-        "hero-2.jpg",
         "hero.jpg"
       ],
       "icon": [
@@ -393,6 +392,9 @@
   },
   "mhgen": {
     "demo": {
+      "hero": [
+        "hero.jpg"
+      ],
       "icon": [
         "icon-2.png",
         "icon.png"
@@ -416,6 +418,9 @@
   },
   "mhgu": {
     "demo": {
+      "hero": [
+        "hero.jpg"
+      ],
       "logo": [
         "logo.png"
       ]
@@ -489,9 +494,6 @@
       ],
       "logo": [
         "logo.png"
-      ],
-      "mhp3rd": [
-        "mhp3rd-logo.png"
       ]
     },
     "psp": {
@@ -593,6 +595,9 @@
       "grid.png"
     ],
     "hero": [
+      "hero-2.jpg",
+      "hero-3.jpg",
+      "hero-4.jpg",
       "hero.jpg"
     ],
     "icon": [
@@ -602,7 +607,7 @@
       "logo.png"
     ]
   },
-    "mhxx": {
+  "mhxx": {
     "3ds": {
       "demo": {
         "grid": [
@@ -651,5 +656,12 @@
         "logo.png"
       ]
     }
-  }
+  },
+  "output": [
+    "output.json"
+  ],
+  "run": [
+    "run.bat",
+    "run.js"
+  ]
 }

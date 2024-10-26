@@ -27,14 +27,20 @@ export const UseModal = () => {
                 }
             };
 
+            var ua = navigator.userAgent.toLowerCase();
+            var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+
             // Function to handle Android back button
             const handleBackButton = () => {
                 onExitModal();
-                window.history.pushState(
-                    null, 
-                    null, 
-                    window.location.href
-                );
+                
+                if(isAndroid) {
+                    window.history.pushState(
+                        null, 
+                        null, 
+                        window.location.href
+                    );
+                }
             };
 
             // Add event listeners for 'keydown' and 'popstate'
@@ -42,7 +48,7 @@ export const UseModal = () => {
             window.addEventListener('popstate', handleBackButton);
 
             // Push a new state so the back button can trigger popstate event
-            if (showModal) {
+            if (showModal && isAndroid) {
                 window.history.pushState(
                     null, 
                     null, 
@@ -54,11 +60,11 @@ export const UseModal = () => {
             return () => {
                 window.removeEventListener('keydown', handleEsc);
                 window.removeEventListener('popstate', handleBackButton);
-                if (showModal) {
+                if (showModal && isAndroid) {
                     window.history.back(); // Go back one step in history when modal is closed
                 }
             };
-        }, [showModal, setShowModal]);
+        }, []);
 
         if (!showModal) return <></>;
 
