@@ -1,0 +1,90 @@
+import { deckyBat as DeckyBat } from "@data/releases.json";
+import CopyCommandInput from "@components/CopyCommandInput"
+
+<div id = "decky" className="instructions">
+
+<div id = "decky-steamos">
+## SteamOS
+
+Visit this page in SteamOS "Desktop Mode"
+
+Copy the Decky Loader installer script:
+<CopyCommandInput
+    copyCommand = {'curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh'}
+/>
+
+Paste into the Konsole app (Start Menu \> System)
+Hit the "Enter" key to install
+<br />
+**Alternatively**, follow the steps provided from the Decky Loader GitHub:
+
+[https://github.com/SteamDeckHomebrew/decky-loader#user-content--installation](https://github.com/SteamDeckHomebrew/decky-loader#user-content--installation)
+
+</div>
+<br />
+
+<div id = "decky-windows">
+## Windows
+
+### Quick Setup
+
+Download the Decky installer script:
+
+<a 
+    className = "cta" 
+    href = {DeckyBat.url} 
+    download>{DeckyBat.title}</a>
+
+Right-click {DeckyBat.title} > "Run as Administrator"
+
+Follow the prompts (hit Enter to use default file/folder paths for unpacking the Theme)
+
+Once the installation completes, the folder at ```Decky\PluginLoader_Win``` will open
+
+Run either ```PluginLoader.exe``` or ```PluginLoader_noconsole.exe``` (starts silently in the background)
+<br />
+### Manual Setup
+
+Navigate to your Steam installation location and create a blank file with the following name:
+
+<CopyCommandInput copyCommand = ".cef-enable-remote-debugging" />
+
+Enable "File name extensions" in File Explorer > "View" (or "View" > "Show")
+
+Alternatively, open the command prompt at this location and run:
+
+<CopyCommandInput copyCommand = {`type nul > \".cef-enable-remote-debugging\"`} />
+
+This enables CEF Remote Debugging and is *required*
+
+Next, copy and run the following command to setup Decky Loader (default location: Documents\Decky\PluginLoader_Win):
+
+<CopyCommandInput copyCommand = {`cd %USERPROFILE%\Documents && curl -L -o \"PluginLoader_Win.zip\" \"https://nightly.link/SteamDeckHomebrew/decky-loader/workflows/build-win/main/PluginLoader%20Win.zip\" && powershell -command \"Expand-Archive -Path 'PluginLoader_Win.zip' -DestinationPath '.\Decky\PluginLoader_Win'\" && del \"PluginLoader_Win.zip\" && echo Done! || echo Failed!`} />
+</div>
+<br />
+<div id = "decky-uninstall">
+## Uninstall Decky Loader
+
+### SteamOS
+Enter "Desktop Mode" > Konsole
+
+Copy, paste, and hit Enter to run the uninstaller:
+
+<CopyCommandInput
+    copyCommand = {`curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/uninstall.sh | sh`}
+/>
+
+Alternatively, follow the steps indicated in the Decky Loader GitHub:
+
+[https://github.com/SteamDeckHomebrew/decky-loader#user-content--uninstallation](https://github.com/SteamDeckHomebrew/decky-loader#user-content--uninstallation)
+
+<br />
+### Windows
+Download and run our (unofficial) "Decky Uninstaller" (as an Administrator):
+
+<a 
+    className = "cta" 
+    href = "https://www.dropbox.com/scl/fi/58p983c1e4oedlsoor6ab/uninstall_decky.bat?rlkey=9fg3la7f04488q7vamuk6pzui&st=nd44krx2&dl=1" 
+    download>uninstall_decky.bat</a>
+</div>
+</div>

@@ -204,25 +204,37 @@ svg .cls-1 {
   max-height: 90svh;
   overflow: auto;
 
-  .cta {
+  h2 {
+    margin-bottom: 16px;
+    margin-top: 32px;
+
+    &:nth-of-type(1) {
+      margin-top: auto;
+    }
+  }
+
+  h3 {
+    margin-bottom: 16px;
+  }
+
+  .btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+
+    & > *:nth-last-child(1) {
+      margin-left: 8px;
+    }
+  }
+
+  .cta.exit {
     padding: 16px 24px;
     width: 100%;
     text-align: center;
     margin-top: 24px;
     position: sticky;
     bottom: 0px;
-  }
-
-  h3 {
-    color: $accent-color;
-    font-size: 2rem;
-    margin-bottom: 16px;
-    line-height: 2.25rem;
-  }
-
-  p {
-    line-height: 1.75rem;
-    max-width: unset;
   }
 
   &.image-modal {
@@ -254,6 +266,10 @@ svg .cls-1 {
 
     .cta {
         max-width: 900px;
+
+        &.secondary {
+          margin-top: -5%;
+        }
     }
   }
 }
@@ -275,16 +291,57 @@ svg .cls-1 {
         }
     }
 
-    a:hover {
+    a:not(.cta):hover {
       color: $accent-color;
     }
+}
+
+.download-window {
+  .dropbox {
+    display: table;
+    background-color: #0061FE;
+    padding: 4px 12px;
+    border-radius: 0px;
+    margin: 8px 0px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.65;
+    }
+  }
+}
+
+#videos-installation {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background-color: $light-dark;
+  flex-flow: row wrap;
+
+  & > div {
+    padding: 40px 16px;
+    max-width: 480px;
+  }
+
+  @media all and (max-width: 900px) {
+    display: block;
+
+    & > div {
+      padding-bottom: 10px;
+      max-width: unset;
+      margin: auto;
+
+      &:nth-last-child(1) {
+        padding-bottom: 40px;
+      }
+    }
+  }
 }
 
 #videos-page {
     .video-preview {
         .video-container {
-            border-radius: 16px;
-            margin: auto auto 16px;
+          border-radius: 16px;
         }
 
         .details {
@@ -335,9 +392,11 @@ svg .cls-1 {
         .video-preview {
           .video-container {
             position: relative;
-            padding-bottom: 56.25%; // 16:9 aspect ratio (9 / 16 = 0.5625)
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
+            width: 100%;
+            margin-top: 0px;
 
             iframe {
                 position: absolute;
@@ -362,50 +421,39 @@ svg .cls-1 {
         }
 
         .video-preview {
-          background-color: $mid-dark;
+          background-color: $light-dark;
           padding: 12px;
           border-radius: 8px;
+          position: relative;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: space-between;
           
             .video-container {
-                border-radius: 8px;
-                margin: auto auto 16px;
+              border-radius: 8px;
             }
 
             position: relative;
 
-            .cta.install-btn {
-              padding: 4px 16px;
-              background: transparent;
-              color: $accent-color;
-              border: solid thin $accent-color;
-              display: block;
-              margin-top: 16px;
-
-              &:hover {
-                background-color: $accent-color;
-                color: $darkest;
-              }
-            }
-
             .btns {
-                margin-top: 16px;
-                & > .flex {
-                  gap: 4px;
-                  align-items: center;
-                }
+                margin-top: 0px;
 
                 .cta {
                     padding: 4px 8px;
                     border-radius: 4px;
                     font-size: small;
                 }
-
-                .cta.secondary {
-                  flex: 1 1 100%;
-                }
             }
 
             .details {
+              margin-top: 0px;
+              padding-top: 16px;
+              display: flex;
+              flex-flow: column nowrap;
+              justify-content: space-between;
+              align-items: stretch;
+              flex-grow: 1;
+
                 h3 {
                     font-size: 1.25rem;
                     line-height: 1.5rem;
@@ -415,7 +463,7 @@ svg .cls-1 {
                 a, button {
                     display: block;
                     text-align: center;
-                    width: 100%;
+                    flex: 1 2;
                     box-sizing: border-box;
                 }
             }
@@ -461,13 +509,26 @@ svg .cls-1 {
     position: relative;
     z-index: 1;
   }
+
+  .btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+
+    button:nth-last-child(1), 
+    a:nth-last-child(1) {
+      margin-left: 8px;
+    }
+  }
 }
 
 #featured-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 160px 0 80px;
+  justify-content: center;
+  flex-flow: column nowrap;
+  padding: 80px 0 80px;
   z-index: 1;
   position: relative;
 
@@ -478,17 +539,27 @@ svg .cls-1 {
   }
 
   #featured {
+    text-align: center;
+    margin-top: -15%;
+
+    h1, h2 {
+      text-shadow: 0px 0px 16px #220d07;
+    }
+
     h1 {
-      font-size: 5rem;
-      max-width: 480px;
-      line-height: 4.5rem;
-      margin-bottom: 16px;
+      font-size: 6rem;
+      line-height: 5rem;
+      max-width: 640px;
+      margin: auto auto;
     }
 
     h2 {
       font-size: 2rem;
-      margin: 16px 0 24px;
       font-weight: 400;
+    }
+
+    .cta {
+      margin: 12px auto auto;
     }
 
     @media all and (max-width: 720px) {
@@ -511,8 +582,8 @@ svg .cls-1 {
   }
 
   .hero-shot {
-    max-width: 640px;
-    width: 50%;
+    max-width: 720px;
+    width: 60%;
     box-sizing: border-box;
     border-radius: 24px;
     animation-delay: 0.2s;
@@ -540,7 +611,7 @@ svg .cls-1 {
 
   .img-wrapper {
     display: block;
-    border-radius: 12px;
+    border-radius: 4px;
     width: 100%;
     height: 200px;
     margin-bottom: 12px;
@@ -571,7 +642,6 @@ svg .cls-1 {
   padding: 1% 5% 2.5%;
   margin: 0 -32px 0 -16px;
   max-width: 100%;
-  box-shadow: 0 -70px 80px 16px $darkest;
   position: relative;
 
   h5 {
@@ -588,10 +658,14 @@ svg .cls-1 {
   }
 
   .game-thumb {
-    width: 160px;
+    width: 140px;
   }
 
-  @media all and (max-width: 640px) {
+  & > .flex {
+    flex-flow: row wrap;
+  }
+
+  @media all and (max-width: 512px) {
       & > .flex {
         display: block;
         margin: auto;
@@ -763,7 +837,7 @@ ul, ol {
   }
 
   .game-thumb {
-    margin: 16px;
+    margin: 10px;
     cursor: pointer;
     transition: transform 0.24s cubic-bezier(0.23, 1, 0.32, 1);
     width: 160px;
@@ -772,7 +846,6 @@ ul, ol {
 
     .img-wrapper {
       display: block;
-      border-radius: 12px;
       width: 100%;
       height: 200px;
       margin-bottom: 12px;
@@ -872,5 +945,31 @@ ul, ol {
   to {
     transform: translate(-50%, -50%);
     opacity: 1;
+  }
+}
+
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+
+  & > *:nth-last-child(1) {
+      margin-left: 8px;
+  }
+
+  @media all and (max-width: 850px) {
+      display: block;
+
+      & > * {
+          display: block;
+          text-align: center;
+      }
+
+      & > *:nth-last-child(1) {
+          margin-left: auto;
+          margin-top: 8px;
+      }
   }
 }

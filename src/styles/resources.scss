@@ -1,0 +1,21 @@
+@import "./variables";
+
+#resources {
+    .instructions {
+        .cta {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .copy-wrapper {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        background-color: $light-dark;
+        max-width: 320px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}

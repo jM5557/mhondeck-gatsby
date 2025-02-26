@@ -1,0 +1,28 @@
+@import "./variables";
+
+#changelog {
+    display: block;
+    box-shadow: 0 -70px 80px 16px $darkest;
+
+
+    h2 {
+        color: $accent-color;
+    }
+
+    ul {
+        list-style-type:disc;
+        display: block;
+        max-height: 240px;
+        overflow-y: auto;
+    }
+
+    h2, ul {
+        max-width: 640px;
+        margin: auto;
+    }
+
+    li {
+        display: block;
+        padding: 12px 0px;
+    }
+}

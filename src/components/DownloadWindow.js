@@ -29,7 +29,10 @@ const DownloadWindow = ({
         <div className="download-window">
             <h3>Download</h3>
             <h2>{title}</h2>
-            <p>File Size: {fileSize}</p>
+            { fileSize &&
+                <p>File Size: {fileSize}</p>
+            }
+            <a className = "dropbox" target = "__blank" href = { downloadLink.replace("dl=1", "dl=0")}>View in Dropbox</a>
             <div className='download-inner'>
                 {isDownloading ? (
                     <>

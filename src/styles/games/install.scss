@@ -1,0 +1,51 @@
+@import "./../variables";
+
+.install-section {
+    padding: 60px 16px;
+
+    .section-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 900px;
+        margin: auto;
+
+        @media all and (max-width: 720px) {
+            display: block;
+        }
+    }
+
+    .video {
+        position: relative;
+        padding-bottom: 270px;
+        min-width: 360px;
+        background-color: orange;
+
+        @media all and (max-width: 720px) {
+            width: 480px;
+            margin: auto auto 24px;
+        }
+    }
+
+    .text-content {
+        margin-left: 5%;
+
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            margin-top: 16px;
+        }
+
+        h2 {
+            color: $accent-color;
+        }
+
+        em {
+            color: $accent-color;
+        }
+
+        li {
+            padding-bottom: 16px;
+        }
+    }
+}

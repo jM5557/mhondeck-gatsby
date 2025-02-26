@@ -8,18 +8,20 @@
 
     & > * {
       position: relative;
-    }
+      text-align: center;
+      margin: auto;
 
-    .cta.secondary {
-      margin-top: 16px;
+      &.btns {
+        margin-top: 16px;
+      }
     }
 
   }
 
   .search {
     background: $mid-dark;
-    border: solid thin $lighter-dark;
-    border-radius: 300px;
+    border: none;
+    border-bottom: solid 4px $lighter-dark;
     padding: 24px 16px;
     font-size: 1.5rem;
     color: $lightest;
@@ -27,6 +29,12 @@
     width: 80%;
     margin: 5% auto auto auto;
     max-width: 900px;
+    transition: border-bottom-color 0.64s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:focus {
+      outline: none;
+      border-bottom-color: $accent-color;
+    }
   }
   
   .artwork {
@@ -80,7 +88,6 @@
 
   .box {
     padding: 8px 16px;
-    background-color: $mid-dark;
     border-radius: 4px;
 
     .box {
@@ -135,22 +142,22 @@
 
     &.hero {
       max-width: 200px;
-      border-radius: 12px;
+      border-radius: 4px;
     }
 
     &.icon {
       width: 75px;
-      border-radius: 8px;
+      border-radius: 4px;
     }
 
     &.grid {
       max-width: 120px;
-      border-radius: 10px;
+      border-radius: 4px;
     }
 
     &.logo {
       max-width: 160px;
-      border-radius: 6px;
+      border-radius: 4px;
       background-color: $mid-dark;
     }
   }

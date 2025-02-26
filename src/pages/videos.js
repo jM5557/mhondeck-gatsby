@@ -35,33 +35,23 @@ const VideosPage = () => {
         Bootup Videos
       </h1>
       <h2>
-        Videos that play when Gaming Mode or Steam Big Picture Mode starts up
+        Videos that play when Gaming Mode or Steam Big Picture Mode starts
       </h2>
-      <button 
-        type = "button"
-        className="cta secondary"
-        onClick={()=>setShowModal(!showModal)}
-      >
-        Installation
-      </button>
     </section>
+    <VideosInstallation />
     <article className="video-gallery-wrapper">
       <ul className="video-gallery">
         {Videos.map(v => (
-          <li key={v.iframeSrc}>
             <VideoPreview
               {...{ 
                 onSelectVideo,
                 video: v 
-              }} 
+              }}
+              key = {v.iframeSrc}
             />
-          </li>
         ))}
       </ul>
     </article>
-    <ModalComponent>
-      <VideosInstallation />
-    </ModalComponent>
     
     { (selectedVideo) &&
       <DownloadModalComponent

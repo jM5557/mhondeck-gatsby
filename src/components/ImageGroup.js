@@ -6,6 +6,19 @@ const ImageGroup = ({ groupName, images, folderPath }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const { showModal, setShowModal, ModalComponent } = UseModal();
 
+  const downloadImage = (imageUrl) => {
+    const link = document.createElement('a');
+    link.href = imageUrl;
+
+    // Extract the filename from the image URL
+    const filename = imageUrl.split('/').pop();
+    link.download = filename;
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className={`group`}>
       <h3>{groupName.charAt(0).toUpperCase() + groupName.slice(1)}</h3>
@@ -14,7 +27,7 @@ const ImageGroup = ({ groupName, images, folderPath }) => {
           <img
             key={groupName + index}
             className={groupName} // Add classname based on type
-            src={`/images/gallery/${folderPath}/${fileName}`} // Construct image path
+            src={`/images/thumbs/${folderPath}/${fileName}`} // Construct image path
             alt={fileName}
             onClick={() => {
               setSelectedImage(`/images/gallery/${folderPath}/${fileName}`);
@@ -33,6 +46,11 @@ const ImageGroup = ({ groupName, images, folderPath }) => {
               alt={selectedImage}
             />
           </div>
+          <br/>
+          <button 
+            onClick={() => downloadImage(selectedImage)}
+            className="cta secondary"
+          >Download</button>
         </>
       </ModalComponent>
     </div>

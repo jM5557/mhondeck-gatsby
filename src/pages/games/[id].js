@@ -2,9 +2,9 @@ import React from "react";
 import Seo from "@components/seo";
 import data from "@data/output.json";
 import games from "@data/games.json";
-import PlatformInfo from "@components/PlatformInfo";
 import RecursiveRenderer from "@components/RecursiveRenderer";
 import "@styles/games.scss";
+import "@styles/games/install.scss";
 import Header from "@components/header";
 import Footer from "@components/footer";
 import { UseModal } from "@components/Modals";
@@ -70,22 +70,28 @@ const GamePage = ({ params }) => {
         <Header />
 
         <h1>{games[id].title}</h1>
-        <PlatformInfo gameId={id} />
 
-        <button 
-          type="button" 
-          onClick={() => setShowModal(!showModal)}
-          className="cta secondary"
-        >
-          Installation
-        </button>
+        <div className="btns">
+          <button 
+            type="button" 
+            onClick={() => setShowModal(!showModal)}
+            className="cta secondary"
+          >
+            Installation
+          </button>
+          <a
+              href = "/games"
+              className="cta secondary"
+          >
+              More Games
+          </a>
+        </div>
       </section>
 
       <div className="artwork">
         <div className="artwork-text">
           <div>
-            <h2>Steam Grid Artwork</h2>
-            <h3>Use with the SteamGridDB Plugin for Decky Loader</h3>
+            <h2>Steam Game Artwork</h2>
           </div>
 
           { (games[id].artwork) &&
@@ -110,7 +116,6 @@ const GamePage = ({ params }) => {
           <DownloadWindow
             downloadLink={games[id].artwork.url}
             title={games[id].title}
-            fileSize={games[id].artwork.fileSize}
           />
         </DownloadModalComponent>
       }

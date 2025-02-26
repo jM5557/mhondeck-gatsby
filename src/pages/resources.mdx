@@ -3,9 +3,13 @@ title: "MHOnDeck | FAQ - Frequently Asked Questions"
 ---
 
 import Seo from "@components/seo";
-
+import "@styles/resources.scss";
 import Footer from "@components/footer";
 import Header from "@components/header";
+import DeckyLoader from "@content/Resources/DeckyLoader"
+import SteamGridDB from "@content/Resources/SteamGridDB"
+import WindowsProtect from "@content/UI Theme/WindowsProtect.mdx"
+
 
 <Seo title = "Resources" />
 
@@ -13,12 +17,17 @@ import Header from "@components/header";
     <section id="hero">
         <Header />
         
-# Resources
+# Resources & Utilities
 
 ## Useful Websites and Tools
     </section>
 <section id = "resources" className="large-text-list">
+<WindowsProtect />
+
 - ### Decky Loader
+    <DeckyLoader />
+    <br />
+    Links:
     - [decky.xyz](https://decky.xyz/)
     - [github.com/SteamDeckHomebrew/decky-plugin-database](https://github.com/SteamDeckHomebrew/decky-plugin-database)
     - [docs.deckthemes.com/CSSLoader/Install](https://docs.deckthemes.com/CSSLoader/Install/)
@@ -29,6 +38,9 @@ import Header from "@components/header";
     - [deckthemes.com/download/deck](https://deckthemes.com/download/deck)
     - [deckthemes.com/download/windows](https://deckthemes.com/download/windows)
 - ### SteamGridDB
+    <SteamGridDB />
+    <br />
+    Links:
     - [github.com/SteamGridDB/decky-steamgriddb](https://github.com/SteamGridDB/decky-steamgriddb)
     - [steamgriddb.com](https://steamgriddb.com)
 </section>

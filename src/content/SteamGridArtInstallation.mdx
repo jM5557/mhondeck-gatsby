@@ -1,26 +1,5 @@
----
----
+import SteamGridDB from "@content/SteamGameArtwork/SteamGridDB"
+import WithoutSteamGridDB from "@content/SteamGameArtwork/WithoutSteamGridDB"
 
-import CopyCommandInput from "./../components/CopyCommandInput";
-
-### Installation
-
-- Click the **Download Pack** button and unzip the pack somewhere onto your SteamOS or Windows device
-
-- **Set Artwork (with SteamGridDB)**:
-   - Prerequisite: Install **Decky Loader** and the **SteamGridDB Plugin**
-   - Visit Game Mode (on Steam Deck) or Big Picture Mode (on Windows)
-   - Find the game in your Steam Library
-   - From the game's page, navigate to `Settings > Change Artwork...`
-   
-   This will open the SteamGridDB menu for the game.
-   - Navigate to Manage (last tab) from the game's SteamGridDB menu
-   - Click the Folder icon on each artwork type
-   - Browse for your preferred artwork image
-<br />
-<br />
-- **Set Artwork (without SteamGridDB)**:
-   - Locate the game in your Steam Library from a Collection (or click "Uncategorized")
-   - Set the Grid: Right-click the game and select **Manage** > "Set Custom Artwork"
-   - Set the Hero and Logo: From the game's page, right click anywhere and choose "Set Custom Background" or "Set Custom Logo"
-   - Set the Icon: From the game's page (or right-clicking the Grid tile) visit **Settings > Properties**
+<SteamGridDB />
+<WithoutSteamGridDB/>

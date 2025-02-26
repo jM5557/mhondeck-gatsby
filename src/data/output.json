@@ -181,14 +181,6 @@
     }
   },
   "mh4": {
-    "demo": {
-      "hero": [
-        "hero.jpg"
-      ],
-      "logo": [
-        "logo.png"
-      ]
-    },
     "grid": [
       "grid.png"
     ],
@@ -204,14 +196,6 @@
     ]
   },
   "mh4g": {
-    "demo": {
-      "grid": [
-        "grid.png"
-      ],
-      "logo": [
-        "logo.png"
-      ]
-    },
     "grid": [
       "grid.png"
     ],
@@ -359,6 +343,21 @@
       "logo.png"
     ]
   },
+  "mhfzz": {
+    "grid": [
+      "grid.png"
+    ],
+    "hero": [
+      "hero.png"
+    ],
+    "icon": [
+      "icon-2.png",
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
+    ]
+  },
   "mhg": {
     "ps2": {
       "grid": [
@@ -418,8 +417,14 @@
   },
   "mhgu": {
     "demo": {
+      "grid": [
+        "grid.png"
+      ],
       "hero": [
         "hero.jpg"
+      ],
+      "icon": [
+        "icon.png"
       ],
       "logo": [
         "logo.png"
@@ -430,6 +435,9 @@
     ],
     "hero": [
       "hero.jpg"
+    ],
+    "icon": [
+      "icon.png"
     ],
     "logo": [
       "logo.png"
@@ -524,7 +532,13 @@
     "logo": [
       "logo.png"
     ],
-    "v1.01.00": {
+    "v2.02.00": {
+      "grid": [
+        "grid.png"
+      ],
+      "hero": [
+        "hero.png"
+      ],
       "icon": [
         "icon.png"
       ]
@@ -537,18 +551,38 @@
         "icon.png"
       ]
     },
-    "v2.02.00": {
-      "hero": [
-        "hero.png"
+    "v1.01.00": {
+      "icon": [
+        "icon.png"
       ]
     }
   },
   "mhrise": {
+    "demo": {
+      "grid": [
+        "grid.jpg"
+      ],
+      "hero": [
+        "hero.jpg"
+      ],
+      "icon": [
+        "icon.png"
+      ],
+      "logo": [
+        "logo.png"
+      ]
+    },
     "grid": [
-      "grid-2.jpg"
+      "grid.jpg"
     ],
     "hero": [
-      "hero.png"
+      "hero.jpg"
+    ],
+    "icon": [
+      "icon.png"
+    ],
+    "logo": [
+      "logo.png"
     ]
   },
   "mhst": {
@@ -580,12 +614,31 @@
       "logo": [
         "logo.png"
       ]
+    },
+    "pc": {
+      "grid": [
+        "grid-2.jpg",
+        "grid.jpg"
+      ],
+      "hero": [
+        "hero.jpg"
+      ],
+      "icon": [
+        "icon.png"
+      ],
+      "logo": [
+        "logo-2.png",
+        "logo.png"
+      ]
     }
   },
   "mhx": {
     "demo": {
       "grid": [
         "grid.png"
+      ],
+      "icon": [
+        "icon.png"
       ],
       "logo": [
         "logo.png"
@@ -639,6 +692,9 @@
         "grid": [
           "grid.png"
         ],
+        "icon": [
+          "icon.jpg"
+        ],
         "logo": [
           "logo.png"
         ]
@@ -656,12 +712,5 @@
         "logo.png"
       ]
     }
-  },
-  "output": [
-    "output.json"
-  ],
-  "run": [
-    "run.bat",
-    "run.js"
-  ]
+  }
 }

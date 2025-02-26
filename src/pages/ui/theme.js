@@ -30,6 +30,7 @@ const Theme = () => {
     }
 
     const [platform, setPlatform] = useState("STEAMOS");
+    const version = "2.0.0";
 
     return (
         <main className="standard-page">
@@ -42,7 +43,7 @@ const Theme = () => {
                 <div className="details">
                     <div className="detail">
                         <strong>Version</strong>
-                        <p>1.01.00</p>
+                        <p>2.0.0</p>
                     </div>
                 </div>
             </section>

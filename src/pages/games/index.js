@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Header from "@components/header";
-import GridImages from "@components/GridImages";
 import Footer from "@components/footer";
+import GridImages from "@components/GridImages";
 import { UseModal } from "@components/Modals";
 import games from "@data/games";
 import releases from "@data/releases.json";
@@ -41,24 +41,25 @@ const GamesPage = () => {
 
     return (
         <main className="game-page standard-page">
-            <section id="hero" className="">
+            <section id="hero">
                 <Header />
-                <h1>Steam Grid Artwork</h1>
+                <h1>Steam Game Artwork</h1>
                 <h2>Choose a game to view its SteamOS or Steam Big Picture mode artwork</h2>
-                <button
-                    type="button"
-                    onClick={() => setDownloadModal(!downloadModal)}
-                    className="cta"
-                >
-                    Download Pack
-                </button>
-                <button
-                    type="button"
-                    onClick={() => setShowModal(!showModal)}
-                    className="cta secondary"
-                >
-                    Installation
-                </button>
+                <div className="btns">
+                    <button
+                        type="button"
+                        onClick={() => setDownloadModal(!downloadModal)}
+                        className="cta"
+                    >
+                        Download Pack
+                    </button>
+                    <a
+                        href = "/games/install"
+                        className="cta secondary"
+                    >
+                        Installation
+                    </a>
+                </div>
             </section>
             <input
                 type="text"
@@ -82,7 +83,7 @@ const GamesPage = () => {
                 />
             </DownloadModalComponent>
             <Footer />
-            <Seo title = "Steam Grid Artwork - All Games" />
+            <Seo title = "Steam Game Artwork - All Games" />
         </main>
     )
 }

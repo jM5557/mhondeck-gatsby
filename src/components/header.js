@@ -8,9 +8,9 @@ const Header = () => (
       <span className="hidden">MHOnDeck</span>
     </a>
     <div className="submenu flex space-b align-c">
+      <li><a href="/ui/theme">UI Theme</a></li>
       <li><a href="/games">Games</a></li>
       <li><a href="/videos">Videos</a></li>
-      <li><a href="/ui/theme">UI Theme</a></li>
     </div>
   </nav>
 )

@@ -1,5 +1,5 @@
 {
-  "version": "1.1.00",
+  "version": "2.0.00",
   "theme": {
     "title": "MHOnDeck UI Theme",
     "url": "https://www.dropbox.com/scl/fi/uvj2y305tf4ftnlnbyldj/homebrew.zip?rlkey=ephy3vcmzc4nz8udum0lt4sih&dl=1",
@@ -16,8 +16,16 @@
     "fileSize": "1.32 MB"
   },
   "games": {
-    "title": "Steam Grid Artwork",
+    "title": "Steam Game Artwork",
     "url": "https://www.dropbox.com/scl/fo/ss37zk1a7b2xdqa2ng8w0/APqros5Xgn7GWeNpIlUsNpw?rlkey=oh5k0dml8o39a485lik5pfj2b&st=ggheqpi1&dl=1",
     "fileSize": "111 MB"
+  },
+  "deckyBat": {
+    "title": "decky.bat",
+    "url": "https://www.dropbox.com/scl/fi/7jfv18iiwxph38mohjhlw/decky.bat?rlkey=xyhlm295qo5yoxhioiu5dmev1&st=p01j9sm5&dl=1"
+  },
+  "themeBat": {
+    "title": "theme.bat",
+    "url": "https://www.dropbox.com/scl/fi/b44a572qy22dz7uwumc9q/theme.bat?rlkey=vwl24wq5u6ctb9hfvmidmakyh&st=oy9kfteg&dl=1"
   }
 }
