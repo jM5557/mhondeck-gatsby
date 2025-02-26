@@ -31,7 +31,7 @@ export default function Home() {
       <section id="hero">
         <Header />
         <div id="featured-wrapper">
-          <img alt="UI Theme" src="/images/CSS Theme/game.png" className="hero-shot" />
+          <img alt="UI Theme" src="/images/CSS Theme/game.PNG" className="hero-shot" />
           <div id="featured">
             <h1>Monster Hunter UI Theme</h1>
             <h2>For Steam</h2>

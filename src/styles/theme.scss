@@ -153,6 +153,11 @@
     p {
         line-height: 1.5rem;
     }
+
+    &.warning {
+        border-left: solid 2px rgb(255, 35, 35);
+        background-color: rgb(40, 6, 6);
+    }
 }
 
 .install {
