@@ -1,0 +1,64 @@
+import CopyCommandInput from "@components/CopyCommandInput"
+import DownloadItem from "@components/DownloadItem"
+import releases from "@data/releases.json"
+import {commands} from "@data/commands.js"
+
+<div className="prereq">
+
+#### Requirements
+
+<a className = "cta" href="/resources#decky">Decky Loader</a>
+
+</div>
+
+<br />
+<br />
+
+#### Quick Setup
+
+Visit this page on SteamOS "Desktop Mode"
+
+Copy the "MHOnDeck UI Theme" installer script:
+
+<CopyCommandInput
+    copyCommand = {commands.theme}
+/>
+
+Open the Konsole app (Start Menu \> System) and hit the "Enter" key
+
+Wait for the UI Theme to install
+
+<br />
+<br />
+
+#### Manual Setup
+
+Download the "MHOnDeck UI Theme":
+
+<ul className="link-box">
+    <DownloadItem 
+        item = {releases.theme}
+        onClick = {props.setDownload}
+    />
+</ul>
+
+OR
+
+<ul className="link-box">
+    <DownloadItem 
+        item = {releases.css}
+        onClick = {props.setDownload}
+    />
+    <DownloadItem 
+        item = {releases.sfx}
+        onClick = {props.setDownload}
+    />
+</ul>
+
+Right-click and extract the contents of the downloaded file into the following folder:
+
+```/home/deck/homebrew```
+
+The final result should look like:
+
+```/home/deck/homebrew/sounds``` and ```/home/deck/homebrew/themes```

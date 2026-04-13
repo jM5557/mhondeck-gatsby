@@ -1,0 +1,123 @@
+import React, { useState } from "react";
+import Header from "@components/header";
+import "@styles/theme.scss"
+import Footer from "@components/footer";
+import Seo from "@components/seo";
+import { UseModal } from "@components/Modals";
+import DownloadWindow from "@components/DownloadWindow";
+
+import Windows from "@content/UI Theme/Windows";
+import SteamOS from "@content/UI Theme/SteamOS";
+import Finalizing from "@content/UI Theme/Finalizing";
+import Uninstall from "@content/UI Theme/Uninstall";
+
+const Theme = () => {
+    const {
+        setShowModal: setDownloadModal,
+        ModalComponent: DownloadModalComponent
+    } = UseModal();
+
+    const [selectedDownload, setSelectedDownload] = useState(null);
+
+    const setDownload = (download) => {
+        setSelectedDownload(download);
+        setDownloadModal(true);
+    }
+
+    const onExitDownload = () => {
+        setSelectedDownload(null);
+        setDownloadModal(false);
+    }
+
+    const [platform, setPlatform] = useState("STEAMOS");
+    const version = "2.0.0";
+
+    return (
+        <main className="standard-page">
+            <section id="hero" className="">
+                <Header />
+
+                <h1>MHOnDeck UI Theme</h1>
+                <h2>CSS Overhaul for SteamOS Game Mode & Steam Big Picture Mode</h2>
+
+                <div className="details">
+                    <div className="detail">
+                        <strong>Version</strong>
+                        <p>2.0.0</p>
+                    </div>
+                </div>
+            </section>
+            <div className="ui-theme-content">
+                <section className="install per-platform">
+                    <h2 className="flex space-b align-c with-tabs">
+                        <span>Installation</span>
+                        <div className="flex space-b">
+                            <button 
+                                type = "button"
+                                onClick={()=>setPlatform("STEAMOS")}
+                                className={platform === "STEAMOS" ? "cta" : "cta secondary"}
+                            >SteamOS</button>
+                            <button 
+                                type = "button"
+                                onClick={()=>setPlatform("WINDOWS")}
+                                className={platform === "WINDOWS" ? "cta" : "cta secondary"}
+                            >Windows</button>
+                        </div>
+                    </h2>
+                    { (platform === "STEAMOS")
+                        ? (<SteamOS setDownload = { (item) => setDownload(item) } />)
+                        : (<Windows setDownload = { (item) => setDownload(item) } />)
+                    }
+                </section>
+                <Finalizing />
+                <Uninstall />
+                <section id = "changelog">
+                <h2>Changelog - 2/23/24</h2>
+                <ul>
+                    <li>
+                    Fixed minor bugs across interactive elements (focus & hover states)
+                    </li>
+                    <li>
+                    Combined Footer and Navbar customization options for more cohesive options
+                    </li>
+                    <li>
+                    Set "Monster Hunter Wilds" font for a variety of headings/menu buttons
+                    </li>
+                    <li>
+                    Added Library wallpaper customization options
+                    </li>
+                    <li>
+                    Added Settings menu art customization options
+                    </li>
+                    <li>
+                    Added themed backgrounds to "Friends & Chat" page elements
+                    </li>
+                    <li>
+                    Added "Monster Hunter Stories 2" icons for the Main Menu as a customization option
+                    </li>
+                    <li>
+                    Added artwork for controller settings page background
+                    </li>
+                </ul>
+                </section>
+            </div>
+            <Footer />
+
+            {(selectedDownload) &&
+                <DownloadModalComponent
+                    onExit={onExitDownload}
+                >
+                    <DownloadWindow
+                        downloadLink={selectedDownload.url}
+                        title={selectedDownload.title}
+                        fileSize={selectedDownload.fileSize}
+                    />
+                </DownloadModalComponent>
+            }
+        </main>
+    );
+}
+
+export const Head = () => <Seo title="MHOnDeck UI Theme" />
+
+export default Theme;

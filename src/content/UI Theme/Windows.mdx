@@ -1,0 +1,66 @@
+import CopyCommandInput from "@components/CopyCommandInput"
+import DownloadItem from "@components/DownloadItem"
+import releases from "@data/releases.json"
+import WindowsProtect from "./WindowsProtect.mdx"
+
+<div className="prereq">
+#### Requirements
+
+<a className = "cta" href="/resources#decky">Decky Loader</a>
+
+</div>
+
+<br />
+<br />
+
+#### Quick Setup
+
+Download the "MHOnDeck UI Theme" installer:
+
+<a 
+    className = "cta" 
+    href = {releases.themeBat.url} 
+    download>{releases.themeBat.title}</a>
+
+
+Right-click > "Run as Administrator"
+
+Wait until the installation completes!
+<br />
+<br />
+
+#### Manual Setup
+
+Download the latest "MHOnDeck UI Theme" release
+
+<ul className="link-box">
+    <DownloadItem 
+        item = {releases.theme}
+        onClick = {props.setDownload}
+    />
+</ul>
+
+OR
+
+<ul className="link-box">
+    <DownloadItem 
+        item = {releases.css}
+        onClick = {props.setDownload}
+    />
+    <DownloadItem 
+        item = {releases.sfx}
+        onClick = {props.setDownload}
+    />
+</ul>
+
+Alternatively, run the following command (downloads and unpacks the "MHOnDeck UI Theme" into your ```%USERPROFILE%\homebrew``` folder):
+
+<CopyCommandInput
+    copyCommand={
+        `cd "%USERPROFILE%" && curl -L -o "homebrew.zip" "https://www.dropbox.com/scl/fi/uvj2y305tf4ftnlnbyldj/homebrew.zip?rlkey=ephy3vcmzc4nz8udum0lt4sih&dl=1" && powershell -command "Expand-Archive -Path 'homebrew.zip' -DestinationPath '.'" && echo Done! || echo Failed!`
+    }
+/>
+
+Next, open the folder: ```Decky\PluginLoader_Win```
+
+Run either ```PluginLoader.exe``` or ```PluginLoader_noconsole.exe``` (starts silently in the background)
